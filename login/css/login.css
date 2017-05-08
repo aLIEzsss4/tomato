@@ -1,0 +1,166 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul,a{
+	list-style: none;
+	text-decoration: none;
+	
+}
+input{
+	outline: none;
+}
+
+.loginbox {
+	width: 300px;
+	height: 530px;
+	position: absolute;
+	margin:auto;
+ 	left:0;
+ 	right:0;
+ 	top:0;
+ 	bottom:0;
+}
+.loginbox .logo {
+	width: 214px;
+	height: 70px;
+	margin: 10px auto 60px;
+}
+.loginbox .loginform ul li{
+	
+	position: relative;
+}
+.loginbox .loginform input {
+	box-sizing: border-box;
+	width: 300px;
+	height: 50px;
+	margin: 0 auto 10px;
+	padding: 5px;
+	border: 1px solid #cccbc6;
+	border-radius: 5px;
+	line-height: 22px;
+	font-size: 14px;
+	color: #ccc;
+	text-indent:51px;
+	
+}
+.loginbox .loginform ul i{
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	left: 14px;
+	top: 14px;
+	overflow: hidden;
+}
+.loginbox .loginform ul li::after{
+	content: '';
+	height: 22px;
+	width: 1px;
+	background-color: #cccbc6;
+	position: absolute;
+	left: 50px;
+	top: 14px;
+	
+}
+.loginbox .loginform ul i img {
+	position: absolute;
+	left: -11px;
+	top: -10px;
+}
+.loginbox .loginform ul li:last-child i img{
+	left: -75px;
+	top: -10px;
+}
+.loginbox .loginform input:focus+i img{
+	left: -43px;
+}
+
+.loginbox .loginform  li:last-child input:focus+i img{
+	left: -107px;	
+}
+.loginbox .loginform  span {
+	display: block;
+	font-size: 12px;
+	line-height: 12px;
+	position: absolute;
+	right: 0;
+	color: #666;
+	
+}
+.loginbox .loginform span a{
+	color: #ffd70d;
+	
+}
+.loginbox .loginform  input:last-child {
+	margin-top: 31px;
+	text-indent:0;
+	background-color: #ffd70d;
+	font-size: 16px;
+	color: #fff;
+}
+.loginbox .otherlogin {
+	position: relative;
+	margin-top: 66px;
+}
+.loginbox .otherlogin h3{
+	color: #ccc;
+	font-size: 14px;
+	line-height: 14px;
+	position: relative;
+	
+}
+.loginbox .otherlogin h3:before {
+	
+	content: '';
+	width: 100px;
+	height: 1px;
+	background-color: #cccccc;
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+.loginbox .otherlogin h3:after {
+	
+	content: '';
+	width: 100px;
+	height: 1px;
+	background-color: #cccccc;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+.loginbox .otherlogin .iconlogin {
+	position: absolute;
+	width: 64px;
+	height: 85px;
+	left: 50px;
+	top: 34px;
+	overflow: hidden;
+}
+.loginbox .otherlogin .iconlogin:last-child {
+	left: 188px;
+
+}
+.loginbox .otherlogin .iconlogin a {
+	display: block;
+	width: 64px;
+	height: 64px;	
+}
+.loginbox .otherlogin .iconlogin a img {
+	
+	position: absolute;
+	left:-10px;
+	top: -42px;
+}
+
+.loginbox .otherlogin .iconlogin:last-child a img {
+	
+	position: absolute;
+	left:-84px;
+	top: -42px;
+}
+.loginbox .otherlogin .iconlogin span{
+	color: #999999;
+	bottom: 0;
+	font-size: 12px;
+}
