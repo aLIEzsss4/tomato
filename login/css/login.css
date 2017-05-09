@@ -40,17 +40,37 @@ input{
 	border-radius: 5px;
 	line-height: 22px;
 	font-size: 14px;
-	color: #ccc;
+	color: #333;
 	text-indent:51px;
 	
 }
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #CCC;opacity:1;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #CCC;opacity:1;
+}
+
+input:-ms-input-placeholder{
+	color: #CCC;opacity:1;
+}
+
+input::-webkit-input-placeholder{
+    color: #CCC;opacity:1;
+}
+
 .loginbox .loginform ul i{
 	width: 22px;
 	height: 22px;
 	position: absolute;
 	left: 14px;
+	
 	top: 14px;
 	overflow: hidden;
+	background-image: url(../img/切图.png);
+	background-repeat: no-repeat;
 }
 .loginbox .loginform ul li::after{
 	content: '';
@@ -62,21 +82,15 @@ input{
 	top: 14px;
 	
 }
-.loginbox .loginform ul i img {
-	position: absolute;
-	left: -11px;
-	top: -10px;
+.loginbox .loginform ul li:last-child i {
+	background-position: -44px 0;
 }
-.loginbox .loginform ul li:last-child i img{
-	left: -75px;
-	top: -10px;
-}
-.loginbox .loginform input:focus+i img{
-	left: -43px;
+.loginbox .loginform input:focus+i {
+	background-position-x: -22px;
 }
 
-.loginbox .loginform  li:last-child input:focus+i img{
-	left: -107px;	
+.loginbox .loginform  li:last-child input:focus+i {
+	background-position-x: -66px;
 }
 .loginbox .loginform  span {
 	display: block;
@@ -88,11 +102,13 @@ input{
 	
 }
 .loginbox .loginform span a{
+	
 	color: #ffd70d;
 	
 }
 .loginbox .loginform  input:last-child {
 	margin-top: 31px;
+	border: 0px solid red;
 	text-indent:0;
 	background-color: #ffd70d;
 	font-size: 16px;
@@ -103,7 +119,7 @@ input{
 	margin-top: 66px;
 }
 .loginbox .otherlogin h3{
-	color: #ccc;
+	color: #666;
 	font-size: 14px;
 	line-height: 14px;
 	position: relative;
@@ -145,22 +161,52 @@ input{
 	display: block;
 	width: 64px;
 	height: 64px;	
-}
-.loginbox .otherlogin .iconlogin a img {
-	
-	position: absolute;
-	left:-10px;
-	top: -42px;
+	background-image: url(../img/切图.png);
+	background-repeat: no-repeat;
+	background-position: 0 -30px;
 }
 
-.loginbox .otherlogin .iconlogin:last-child a img {
+
+.loginbox .otherlogin .iconlogin:last-child a {
 	
-	position: absolute;
-	left:-84px;
-	top: -42px;
+	background-position: -64px -30px;
 }
 .loginbox .otherlogin .iconlogin span{
 	color: #999999;
 	bottom: 0;
 	font-size: 12px;
+}
+/*  注册界面       	*/
+.loginbox .loginform .read {
+	
+	position: absolute;
+	left: -100px;
+}
+.loginbox .loginform  span input {
+	box-sizing: border-box;
+	width: 12px;
+	height: 12px;
+	border: 1px solid #ccc;
+	border-radius: 1px;
+	position: absolute;
+	left: 100px;
+	top: 0;
+}
+.loginbox .loginform .registerform li:nth-child(1) i  {
+	background-position: -88px 0;
+}
+.loginbox .loginform .registerform li:nth-child(1) input:focus+i{
+	background-position: -110px 0;
+}
+.loginbox .loginform .registerform li:nth-child(2) i  {
+	background-position: -44px 0;
+}
+.loginbox .loginform li:nth-child(2) input:focus+i{
+	background-position: -66px 0;
+}
+.loginbox .loginform .registerform li:nth-child(3) i  {
+	background-position: -132px 0;
+}
+.loginbox .loginform li:nth-child(3) input:focus+i{
+	background-position: -154px 0;
 }
