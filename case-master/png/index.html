@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>合集</title>
+
+		<!--<script src="https://d3js.org/d3.v4.min.js"></script>-->
+		<script src="jquery.min.js"></script>
+
+	</head>
+
+	<body>
+		<a id="float" style="display: inline-block; width: 100px;height: 100px;border: 1px solid red;position: fixed;top: 50px;right: 50px;"></a>
+		<a id="float2" style="display: inline-block; width: 100px;height: 100px;border: 1px solid red;position: fixed;top: 200px;right: 50px;"></a>
+		<iframe id="if1" frameborder="0" width="960" height="600" src="css/index.html" scrolling="no">
+		</iframe>
+		<iframe id="if2" name="if2" frameborder="0" width="960" height="600" src="img/index.html" scrolling="no">
+		</iframe>
+		<canvas id="canvas" width="960" height="600"></canvas>
+	</body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var pngSrc=[];
+			setTimeout(function() {
+
+				for(var i = 1; i <3;) {
+					
+					var canvas = document.getElementById('canvas');
+					var ctx = canvas.getContext('2d');
+//					console.log(i)
+					var data = $('<div>').append($('#if' + i).contents().find('svg').clone()).html();
+					var img = new Image();
+					$('body').append(img);
+					var blob = new Blob([data], {
+						type: 'image/svg+xml'
+					});
+					var url = window.URL.createObjectURL(blob);
+					
+					var dataurl=canvas.toDataURL('image/png');
+						pngSrc.push(dataurl,blob);
+						console.log(i)
+					img.onload = function() {
+						ctx.drawImage(img, 0, 0);
+//						alert("ss")
+//						var a = document.createElement("a");
+//						
+//						a.download = "fallback.png";
+//						var dataurl = canvas.toDataURL("image/png");
+////						console.log(dataurl)
+//						a.href = dataurl;
+//						$('body').append(a);
+//						a.click();
+//										domURL.revokeObjectURL(url);
+
+					}
+					img.src = url;
+				
+					console.log(pngSrc)
+					i++;
+				}
+//				i++;
+
+			}, 1000);
+
+			var ss = document.querySelector('#float');
+			ss.onclick = function() {
+				ss.download = "fallback.png";
+				var dataurl = canvas.toDataURL("image/png");
+				ss.href = 'img.png';
+			}
+		}
+	</script>
+
+</html>
