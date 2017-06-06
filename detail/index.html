@@ -4,7 +4,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>详情页</title>
-		<link rel="stylesheet" type="text/css" href="detail.css"/>
+		<link rel="stylesheet" type="text/css" href="detail.css" />
+		<script type="text/javascript" src="detail.js">
+			
+		</script>
 	</head>
 
 	<body>
@@ -16,7 +19,7 @@
 					<div class="fl">
 						<div class="cardName">腾讯</div>
 						<div class="cardAdd">
-							深圳	   
+							深圳
 							<span class="industry">it</span>
 						</div>
 					</div>
@@ -65,11 +68,11 @@
 						<h3>知乎榜</h3>
 						<span>NO.3</span>
 					</li>
-    					<li class="rankItem fl">
+					<li class="rankItem fl">
 						<h3>头条榜</h3>
 						<span>NO.4</span>
 					</li>
-					
+
 				</ul>
 				<ul class="picItem">
 					<li class="picBtn fl ac">品牌数字价值</li>
@@ -80,7 +83,7 @@
 					<li class="picBtn fl">参与口碑图</li>
 					<li class="picBtn fl">社媒热点图</li>
 					<li class="picBtn fl">战场状况图</li>
-					
+
 				</ul>
 				<!--svg-->
 				<svg style="width: 1170px;height: 420px;"></svg>
@@ -95,7 +98,7 @@
 					<span class="int">CHART INTERPRETATION</span>
 				</div>
 			</div>
-			<div class="conFoot">
+			<div class="conFoot" id="floatShow">
 				<!--文章排行-->
 				<div class="footRank fl">
 					<h2 class="h2Tit">文章影响力排名</h2>
@@ -116,7 +119,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -136,7 +139,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -156,7 +159,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -176,7 +179,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -196,7 +199,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -216,7 +219,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -236,7 +239,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -256,7 +259,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -276,7 +279,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -296,17 +299,16 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
 						</li>
-						
+
 					</ul>
 
 				</div>
-				
-				
+
 				<!--KOL排行-->
 				<div class="footRank fr">
 					<h2 class="h2Tit">KOL排名</h2>
@@ -327,7 +329,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -347,7 +349,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -367,7 +369,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -387,7 +389,7 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
@@ -407,13 +409,91 @@
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVue fl"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
 									<li class="wbVueLast"><i class="vIcon"></i><span class="vNum">阅读:34534</span></li>
-									
+
 								</ul>
 							</div>
 
 						</li>
 					</ul>
 					<div class="more">查看更多</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="footer">
+			<div class="footerItem">
+
+			</div>
+		</div>
+		<div class="floatLogin" id="flItem">
+			<div class="flTxt">
+				<span class="flSpan">对不起，您还没有登陆哦！请登陆后查看自己的公司</span>
+				<a href="#loginD" class="showBtn" id="showL">登录</a>
+				<a href="#regiD" class="showBtn" id="showR">注册</a>
+			</div>
+			<div class="close"></div>
+			<div class="flTop">
+				<span class="flTit">立即试用数字品牌榜</span>
+				<ul class="loginSwap">
+					<li class="flBtn" id="loginS">登录</li>
+					<li class="flBtn" id="regiS">注册</li>
+				</ul>
+			</div>
+			<div class="flBot">
+				<ul id="loginD">
+					<li class="posi">
+						<input class="loginInput" type="text" name="phone" id="" placeholder="手机号" /><i class="inputIcon"></i>
+					</li>
+					<li class="posi">
+						<input class="loginInput" type="text" name="phone" id="" placeholder="请输入密码" /><i class="inputIcon"></i>
+					</li>
+					<li class="posi">
+						<a class="loginBtn" href="#">登录</a>
+					</li>
+
+				</ul>
+				<div id="regiD">
+					<ul class="regiL">
+
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="姓名" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="性别" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="邮箱" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="我的公司" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="我的职位" /><i class="inputIcon"></i>
+						</li>
+					</ul>
+					<ul class="regiL">
+
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="手机号" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="请输入图片验证码" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="请输入短信验证码" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="请设置密码" /><i class="inputIcon"></i>
+						</li>
+						<li class="posi">
+							<input class="loginInput" type="text" name="phone" id="" placeholder="请确认密码" /><i class="inputIcon"></i>
+						</li>
+					</ul>
+					<div class="regiBott">
+						<a class="loginBtn" href="#">注册</a>
+					</div>
+
 				</div>
 
 			</div>
