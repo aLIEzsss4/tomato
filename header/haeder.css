@@ -25,16 +25,20 @@ ul{
 	position: fixed;
 	font-family: "微软雅黑",arial;
 	background-color: #fff;
+	user-select: none;
+	/*overflow: hidden;*/
 }
 .winner {
 	width: 1170px;
 	margin: 0 auto;
+	height: 80px;
 	position: relative;
 	overflow: hidden;
 }
 .logo {
 	float: left;
 	padding: 10px 0;
+	
 }
 .native{
 	position: absolute;
@@ -51,6 +55,7 @@ ul{
 	float: left;
 	margin-left: 40px;
 	line-height: 78px;
+	height: 78px;
 	border-bottom: 2px solid #fff;
 	font-size: 18px;
 }
@@ -65,7 +70,7 @@ ul{
 .search{
 	position: absolute;
 	right: 0;
-	top: 80px;
+	top: -80px;
 	height: 80px;
 	line-height: 80px;
 	/*background-color: red;*/
@@ -172,31 +177,38 @@ border-bottom: 1px solid #FFD70D;
 }
 .tit {
 	/*text-align: center;*/
-	position: absolute;
+	/*position: absolute;
 	left: 0;
 	top: 35%;
 	right: 0;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
+	bottom: 0;*/
+	user-select: none;
 }
 .h2Tit{
 	color: #fff;
 	font-size: 72px;
 	line-height: 100px;
 	font-weight: 100;
-	
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-85%);
 }
 .h2EnTit{
 	color: #fff;
 	font-size: 48px;
 	font-weight: 100;
 	border-bottom: 1px #FFFFFF solid;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(15%);
 }
 .sy{
 	position: absolute;
-	left: 40%;
-	top: 25%;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(250%);
 }
 .sySea{
 	width:400px;
@@ -204,7 +216,7 @@ border-bottom: 1px solid #FFD70D;
 	color: #fff;
 	font-size: 24px;
 	line-height: 50px;
-	border: 1px red solid;
+	border: 1px #FFD70D solid;
 	border-radius: 20px;
 	background-color: #000000;
 	outline: none;
@@ -217,7 +229,7 @@ border-bottom: 1px solid #FFD70D;
 	background-color: #000000;
 	color: #fff;
 	font-size: 22px;
-	border-left: 1px solid red;
+	border-left: 1px solid #FFD70D;
 	line-height: 45px;
 	height: 45px;
 	position: absolute;
@@ -372,7 +384,8 @@ border-bottom: 1px solid #FFD70D;
 	display: block;
 	width: 100%;
 	height: 500px;
-	max-height: 500px;
+	min-height: 500px;
+	
 	text-align: center;
 	background-image: url(todayBg.png);
 	/*background-repeat: no-repeat;*/
@@ -484,3 +497,9 @@ position: relative;
 	
 }
 /*首页结束*/
+
+
+
+/*底部开始*/
+
+/*底部结束*/
