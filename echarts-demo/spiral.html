@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>心智占有率</title>
+		<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="main" style="width: 1170px;height:550px;padding:10%;"></div>
+		
+	</body>
+	<script type="text/javascript">
+		var myChart=echarts.init(document.getElementById('main'));
+			option = {
+			    title : {
+			        text: '心智占有率',
+			        x:'left'
+			        
+			    },
+			    tooltip : {
+			        trigger: 'item',
+			        position:['45%','40%'],
+			        formatter: "{d}%<br/>{b}",
+			        backgroundColor:'rgba(0,0,0,0)',
+			        padding:20,
+			        textStyle:{
+			            color:'#eead81',
+			            fontWeight:400,
+			            fontSize:22
+			        },
+			        // extraCssText:'box-shadow: 0 0 3px rgba(0,0,0,0.3)'
+			        
+			    },
+			    legend: {
+			        orient:'vertical',
+			        padding:20,
+			        right:'10',
+			        y : 'bottom',
+			        data:['海尔','三星','美的','格力','索尼','LG','TCL','松下']
+			    },
+			    toolbox: {
+			        show : true,
+			        feature : {
+			            mark : {show: true},
+			//          dataView : {show: true, readOnly: false},
+			            magicType : {
+			                show: true,
+			                type: ['pie', 'funnel']
+			            },
+			            restore : {show: true},
+			            saveAsImage : {show: true}
+			        }
+			    },
+			    calculable : true,
+			    series : [
+			        {
+			            name:'心智占有率',
+			            type:'pie',
+			            radius : [50, 230],
+			            center : ['50%', '50%'],
+			            roseType : 'radius',
+			            avoidLabelOverlap: false,
+			            label: {
+			                normal: {
+			                    show: true,
+			                    formatter: "{b}品牌受众{a}为:{d}%",
+			                },
+			                emphasis: {
+			                    show: true
+			                }
+			                
+			            },
+			            lableLine: {
+			                normal: {
+			                    show: true
+			                },
+			                emphasis: {
+			                    show: true
+			                }
+			            },
+			            data:[
+			                {value:40, name:'海尔'},
+			                {value:35, name:'三星'},
+			                {value:30, name:'美的'},
+			                {value:25, name:'格力'},
+			                {value:20, name:'索尼'},
+			                {value:15, name:'LG'},
+			                {value:10, name:'TCL'},
+			                {value:5, name:'松下'}
+			            ]
+			        },
+			        
+			    ]
+		};
+		
+		
+		myChart.setOption(option)
+	</script>
+</html>
