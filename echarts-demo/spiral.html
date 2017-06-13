@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>心智占有率</title>
 		<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="echarts.common.min.js" type="text/javascript" charset="utf-8"></script>-->
 		
 	</head>
 	<body>
@@ -12,7 +13,26 @@
 	</body>
 	<script type="text/javascript">
 		var myChart=echarts.init(document.getElementById('main'));
+		var waterMarkText = 'DBRank';
+
+		var canvas = document.createElement('canvas');
+		var ctx = canvas.getContext('2d');
+		canvas.width = canvas.height = 100;
+		ctx.textAlign = 'center';
+		ctx.textBaseline = 'middle';
+		ctx.globalAlpha = 0.08;
+		ctx.font = '20px Microsoft Yahei';
+		ctx.translate(50, 50);
+		ctx.rotate(-Math.PI / 4);
+		ctx.fillText(waterMarkText, 0, 0);
+		
+		
 			option = {
+	            backgroundColor: {
+			        type: 'pattern',
+			        image: canvas,
+			        repeat: 'repeat'
+			    },
 			    title : {
 			        text: '心智占有率',
 			        x:'left'
@@ -88,7 +108,7 @@
 			                {value:15, name:'LG'},
 			                {value:10, name:'TCL'},
 			                {value:5, name:'松下'}
-			            ]
+			            ].sort(function (a, b) { return b.value - a.value; })
 			        },
 			        
 			    ]
