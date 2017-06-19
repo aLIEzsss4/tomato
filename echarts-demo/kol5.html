@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>kol参与图</title>
+		<script src="echarts.common.min.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	<body>
+		<div id="main" style="width: 1170px;height: 550px;"></div>
+		
+	</body>
+	<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('main'));
+var data={
+    name:['微博加v认证','微博蓝v认证','微博一般用户','微信认证账号','微信非认证账号','知乎认证账号','知乎非认证账号','头条优秀回答者','头条认证回答者','头条一般用户',''],
+    sValue:['500','600','700','650'],
+    cValue:['2000','0','0','1500'],
+    oValue:['4000','4000','3000','3000'],
+    sRatio:['25%','20%','20%','39%'],
+    cRatio:['20%','','','20%'],
+    oRatio:['55%','80%','80%','41%'],
+    wbkol:['wb1','wb2','wb3','wb4','wb5'],
+    wxkol:['wx1','wx2','wx3','wx4','wx5'],
+    zhkol:['zh1','zh2','zh3','zh4','zh5'],
+    ttkol:['tt1','tt2','tt3','tt4','tt5']
+};
+
+
+var data={
+    name:['微博加v认证','微博蓝v认证','微博一般用户','微信认证账号','微信非认证账号','知乎认证账号','知乎非认证账号','头条优秀回答者','头条认证回答者','头条一般用户',''],
+    sValue:['500','600','700','650'],
+    cValue:['2000','0','0','1500'],
+    oValue:['4000','4000','3000','3000'],
+    sRatio:['25%','20%','20%','39%'],
+    cRatio:['20%','','','20%'],
+    oRatio:['55%','80%','80%','41%'],
+    wbkol:['wb1','wb2','wb3','wb4','wb5'],
+    wxkol:['wx1','wx2','wx3','wx4','wx5'],
+    zhkol:['zh1','zh2','zh3','zh4','zh5'],
+    ttkol:['tt1','tt2','tt3','tt4','tt5']
+};
+
+
+option = {
+    tooltip: {
+        trigger: 'item',
+        // formatter: "{a} <br/>{b}: {c} ({d}%)",
+        formatter: "{a} <br/>{b}: {c} "
+    },
+    legend: {
+        selectedMode:false,
+        orient: 'vertical',
+       right:10,
+        bottom:10,
+        data:data['name'],
+    },
+    series: [
+        {
+            // 第一层
+            name:'原创行为kol',
+            type:'pie',
+            roseType:'area',
+            selectedOffset:'30',
+            stillShowZeroSum:false,
+            radius: [0, '30%'],
+            zlevel:4,
+            label: {
+                normal: {
+                    position: 'inner',
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false,
+                    
+                    
+                }
+            },avoidLabelOverlap:true,
+            data:[
+                {value:data['sValue'][0], name:data['name'][0], selected:true,label:{
+                    normal:{
+                        formatter:data['sRatio'][0],
+                    }
+                }},
+                {value:data['sValue'][1], name:data['name'][3], selected:true,label:{
+                    normal:{
+                        formatter:data['sRatio'][1],
+                    }
+                }},
+                {value:data['sValue'][2], name:data['name'][5], selected:true,label:{
+                    normal:{
+                        formatter:data['sRatio'][2],
+                    }
+                }},
+                {value:data['sValue'][3], name:data['name'][7], selected:true,label:{
+                    normal:{
+                        formatter:data['sRatio'][3],
+                    }
+                }}
+            ]
+        },{
+            // 第二层
+            name:'认证kol',
+            type:'pie',
+            roseType:'area',
+            selectedOffset:'30',
+            stillShowZeroSum:false,
+            radius: ['0%', '60%'],
+            zlevel:3,
+            label: {
+                normal: {
+                    show:true,
+                    position: 'outsider',
+                    
+                }
+            },
+             labelLine: {
+                normal: {
+                    show: true,
+                    length:3,
+                    length2:20,
+                    smooth:true
+                }
+            },
+            data:[
+                // {value:data[0][sValue], name:'微博', selected:true},
+                {value:data['cValue'][0], name:data['name'][1], selected:true,label:{
+                    normal:{
+                        formatter:data['cRatio'][0],
+                    }
+                }},
+                {value:data['cValue'][1], name:data['name'][10], selected:true,label:{
+                    normal:{
+                        formatter:data['cRatio'][1],
+                        show:false
+                    }
+                },
+                    labelLine:{
+                        normal:{
+                            show:false
+                        }
+                    }
+                },
+                {value:data['cValue'][2], name:data['name'][10], selected:true,label:{
+                    normal:{
+                        formatter:data['cRatio'][2],
+                    }
+                },
+                    
+                    labelLine:{
+                        normal:{
+                            show:false
+                        }
+                    }
+                    
+                },
+                {value:data['cValue'][3], name:data['name'][8], selected:true,label:{
+                    normal:{
+                        formatter:data['cRatio'][3],
+                    }
+                }
+                }
+            ]
+        }, {
+            // 第三层
+            name:'非认证行为kol',
+            type:'pie',
+            roseType:'area',
+            selectedOffset:'30',
+            stillShowZeroSum:false,
+            radius: [0, '80%'],
+            zlevel:2,
+            label: {
+                normal: {
+                    show:true,
+                    position: 'outsider',
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: true,
+                    length:40,
+                    length2:40,
+                    // smooth:true
+                }
+            },
+             data:[
+                // {value:data[0][sValue], name:'微博', selected:true},
+                {value:data['oValue'][0], name:data['name'][2], selected:true,label:{
+                    normal:{
+                        formatter:data['oRatio'][0],
+                    }
+                }},
+                {value:data['oValue'][1], name:data['name'][4], selected:true,label:{
+                    normal:{
+                        formatter:data['oRatio'][1]
+                    }
+                }},
+                {value:data['oValue'][2], name:data['name'][6], selected:true,label:{
+                    normal:{
+                        formatter:data['oRatio'][2],
+                    }
+                }},
+                {value:data['oValue'][3], name:data['name'][9], selected:true,label:{
+                    normal:{
+                        formatter:data['oRatio'][3],
+                    }
+                }}
+            ]
+        },{
+            // 最外层注释
+            name:'原创行为kol',
+            type:'pie',
+            roseType:'area',
+            selectedOffset:'30',
+            stillShowZeroSum:false,
+            radius: [0, '80%'],
+            zlevel:1,
+            silent:true,
+            label: {
+                normal: {
+                    position: 'outsider',
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: true,
+                    length:0,
+                    length2:30,
+                    smooth:true
+                }
+            },
+            data:[
+                // {value:data[0][sValue], name:'微博', selected:true},
+                {value:data['cValue'][0], name:data['name'][1], selected:true,label:{
+                    normal:{
+                        formatter:'在微博平台上卷入程度最高的5个kol是'+data['wbkol'],
+                    }
+                }},
+                {value:data['cValue'][1], name:data['name'][1], selected:true,label:{
+                    normal:{
+                        formatter:'在微信平台上卷入程度最高的5个kol是'+data['wxkol'],
+                    }
+                }},
+                {value:data['cValue'][2], name:data['name'][2], selected:true,label:{
+                    normal:{
+                         formatter:'在知乎平台上卷入程度最高的5个kol是'+data['zhkol'],
+                    }
+                }},
+                {value:data['cValue'][3], name:data['name'][3], selected:true,label:{
+                    normal:{
+                         formatter:'在头条平台上卷入程度最高的5个kol是'+data['ttkol'],
+                    }
+                }}
+            ]
+        }
+        
+    ]
+}
+	myChart.setOption(option);
+	</script>
+</html>
