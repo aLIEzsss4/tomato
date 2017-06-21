@@ -14,26 +14,43 @@
 	<script type="text/javascript">
 		var myChart = echarts.init(document.getElementById('main'));
 
-		var data=
-{   
-    name:['免费','救人','讹人','好市民','赔款'],
-    word1:[['1','200'],
-    ['1.5','300'],
-    ['2.3','330'],
-    ['3.8','230'],
-    [3.4,400],
-    [3.1,600],
-    [4.45,600],
-    [5.21,700],
-    [6.32,800],
-    [4.41,200]],
-    word2:[[1,300],[2,400],[3,500],[5,800],[6,800],[7,100]],
-    word3:[[4,450],[1,474]],
-    word4:[[2,303],[4,300]],
-    word5:[[1,101],[1,240]]
-    
-};
-// console.log(data['gjc1'])
+		var data = {
+			name: ['免费', '救人', '讹人', '好市民', '赔款'],
+			word1: [
+				['1', '200','https://github.com/aLIEzsss4/tomato','跳转到github'],
+				['1.5', '300'],
+				['2.3', '330'],
+				['3.8', '230'],
+				[3.4, 400],
+				[3.1, 600],
+				[4.45, 600],
+				[5.21, 700],
+				[6.32, 800],
+				[4.41, 200]
+			],
+			word2: [
+				[1, 300],
+				[2, 400],
+				[3, 500],
+				[5, 800],
+				[6, 800],
+				[7, 100]
+			],
+			word3: [
+				[4, 450],
+				[1, 474]
+			],
+			word4: [
+				[2, 303],
+				[4, 300]
+			],
+			word5: [
+				[1, 101],
+				[1, 240]
+			]
+
+		};
+		// console.log(data['gjc1'])
 		var itemStyle = {
 			normal: {
 				opacity: 0.8,
@@ -54,16 +71,18 @@
 				},
 			},
 			tooltip: {
-				formatter:'{a}'
+				formatter: function(params){
+					return params.value[3]
+				}
 			},
-			
+
 			grid: {
-				show:true,
+				show: true,
 				x: 60,
 				y: 80,
 				x2: 150,
 				y2: 60,
-//				 width: {totalWidth} - x - x2,
+				//				 width: {totalWidth} - x - x2,
 				// height: {totalHeight} - y - y2,
 				backgroundColor: 'rgba(0,0,255,0)',
 				borderWidth: 1,
@@ -76,7 +95,7 @@
 				nameTextStyle: {
 					fontSize: 14
 				},
-				min:1,
+				min: 1,
 				max: 7,
 				splitLine: {
 					show: true
@@ -93,8 +112,7 @@
 				},
 				axisLabel: {
 					formatter: '{value}',
-					textStyle: {
-					}
+					textStyle: {}
 				}
 			},
 			yAxis: {
@@ -119,103 +137,106 @@
 					show: true
 				},
 				axisLabel: {
-					textStyle: {
-					}
+					textStyle: {}
 				}
 			},
 			legend: {
-			    data:data['name'],
+				data: data['name'],
 				orient: 'vertical',
-				right:10,
-				bottom:10,
+				right: 10,
+				bottom: 10,
 				// data: ['gjc1','全部', '推荐', '好感', '中立', '差评', '反感'],
 				//				data: ['全部','微博','微信','知乎','头条'],
 			},
-			
-			series: [
-				{
+
+			series: [{
 					name: data['name'][0],
 					type: 'scatter',
 					itemStyle: itemStyle,
 					data: data['word1'],
-					label:{
-					    normal:{
-					      formatter:'{a}'
-					    },
-        			    emphasis:{
-        			        show:true,
-        			        formatter:'{a}\n{c}',
-        			        position:'top'
-        			    }  
-        			},
-        			
+					label: {
+						normal: {
+							formatter: '{a}'
+						},
+						emphasis: {
+							show: true,
+							formatter: '{a}\n{c}',
+							position: 'top'
+						}
+					},
+
 				},
 				{
 					name: data['name'][1],
 					type: 'scatter',
 					itemStyle: itemStyle,
 					data: data['word2'],
-					label:{
-					    normal:{
-					      formatter:'{a}'
-					    },
-        			    emphasis:{
-        			        show:true,
-        			        formatter:'{a}\n{c}',
-        			        position:'top'
-        			    }  
-        			},
-				},{
+					label: {
+						normal: {
+							formatter: '{a}'
+						},
+						emphasis: {
+							show: true,
+							formatter: '{a}\n{c}',
+							position: 'top'
+						}
+					},
+				}, {
 					name: data['name'][2],
 					type: 'scatter',
 					itemStyle: itemStyle,
 					data: data['word3'],
-					label:{
-					    normal:{
-					      formatter:'{a}'
-					    },
-        			    emphasis:{
-        			        show:true,
-        			        formatter:'{a}\n{c}',
-        			        position:'top'
-        			    }  
-        			},
-				
-				},{
+					label: {
+						normal: {
+							formatter: '{a}'
+						},
+						emphasis: {
+							show: true,
+							formatter: '{a}\n{c}',
+							position: 'top'
+						}
+					},
+
+				}, {
 					name: data['name'][3],
 					type: 'scatter',
 					itemStyle: itemStyle,
 					data: data['word4'],
-					label:{
-					    normal:{
-					      formatter:'{a}'
-					    },
-        			    emphasis:{
-        			        show:true,
-        			        formatter:'{a}\n{c}',
-        			        position:'top'
-        			    }  
-        			},
-				},{
+					label: {
+						normal: {
+							formatter: '{a}'
+						},
+						emphasis: {
+							show: true,
+							formatter: '{a}\n{c}',
+							position: 'top'
+						}
+					},
+				}, {
 					name: data['name'][4],
 					type: 'scatter',
 					itemStyle: itemStyle,
 					data: data['word5'],
-					label:{
-					    normal:{
-					      formatter:'{a}'
-					    },
-        			    emphasis:{
-        			        show:true,
-        			        formatter:'{a}\n{c}',
-        			        position:'top'
-        			    }  
-        			},
+					label: {
+						normal: {
+							formatter: '{a}'
+						},
+						emphasis: {
+							show: true,
+							formatter: '{a}\n{c}',
+							position: 'top'
+						}
+					},
 				}
 			]
 		}
 
 		myChart.setOption(option);
+		myChart.on('click', function (params) {
+		    // 控制台打印数据的名称
+		    console.log(params.value[2]);
+		     window.open(params.value[2])
+		});
 	</script>
 
 </html>
