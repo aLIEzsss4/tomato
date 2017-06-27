@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<script src="echarts.common.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="main" style="width: 1170;height:600px;"></div>
+		
+	</body>
+	<script type="text/javascript">
+var myChart = echarts.init(document.getElementById('main'));
+		var data = [];
+		for(var i = 0; i < 4; i++) {
+			data[i] = [];
+		}
+
+		var datadb = [2365, 4774, 6666, 7895]
+		for(var i = 0; i <= 200; i++) {
+			var t = 2 * i * Math.PI / 360;
+			a = i * 200 * 200 / 360
+			r = Math.sqrt(a)
+			//data[0].push([r*Math.cos(t), r*Math.sin(t)]);
+			data[0].push([Math.sqrt(Math.random(i)), i % 360]);
+			data[1].push([Math.sqrt(Math.random(i)), i % 360]);
+			data[2].push([Math.sqrt(Math.random(i)), i % 360]);
+			data[3].push([Math.sqrt(Math.random(i)), i % 360]);
+
+		}
+		console.log(i)
+		var title = ['微信', '微博', '知乎', '头条'];
+
+		// console.log(title)
+		var polar = [];
+		var angleAxis = [];
+		var radiusAxis = [];
+		var series = [];
+		for(var i = 0; i < data.length; i++) {
+			polar.push({
+				center: [20 + 50 * (i % 2) + '%', (25 + 45 * Math.floor(i / 2)) + '%'],
+				radius: '35%'
+			});
+			angleAxis.push({
+				show: false,
+				polarIndex: i,
+				type: 'value',
+				startAngle: 0,
+
+			});
+			radiusAxis.push({
+				show: false,
+				polarIndex: i,
+				min: 0,
+			});
+			series.push({
+				polarIndex: i,
+				coordinateSystem: 'polar',
+				name: title[i],
+				type: 'scatter',
+				showSymbol: false,
+				label: {
+					normal: {
+						show: false,
+						position: 'bottom'
+					}
+				},
+				data: data[i]
+
+			});
+		}
+
+		option = {
+			// color:['#c2e1c5','#fac8a7','#abd9f2','#f1b1ad']
+			// ,
+			title: {
+				text: "DB总值",
+				subtext: '数据来源(数榜)',
+				sublink: 'https://github.com/aLIEzsss4/echarts',
+				x: 'left'
+			},
+			polar: polar,
+			legend: {
+				data: ['微信', '微博', '知乎', '头条'],
+				bottom: '35',
+				right: '20',
+				orient: 'vertical',
+				selectedMode: false
+			},
+			tooltip: {
+				show: false
+			},
+
+			angleAxis: angleAxis,
+			radiusAxis: radiusAxis,
+			series: series,
+			animationDuration: 2000,
+			graphic: [{
+					type: 'text',
+					id: 'text1',
+					z: 100,
+					left: '15%',
+					top: '45%',
+					style: {
+						fill: '#333',
+						text: [
+							'微信:' + datadb[0]
+						],
+						font: '26px Microsoft YaHei'
+					}
+				},
+				{
+					type: 'text',
+					id: 'text2',
+					z: 100,
+					left: '65%',
+					top: '45%',
+					style: {
+						fill: '#333',
+						text: [
+							'微博:' + datadb[1]
+						],
+						font: '26px Microsoft YaHei'
+					}
+				},
+				{
+					type: 'text',
+					id: 'text3',
+					z: 100,
+					left: '15%',
+					top: '90%',
+					style: {
+						fill: '#333',
+						text: [
+							'知乎:' + datadb[2]
+						],
+						font: '26px Microsoft YaHei'
+					}
+				},
+				{
+					type: 'text',
+					id: 'text4',
+					z: 100,
+					left: '65%',
+					top: '90%',
+					style: {
+						fill: '#333',
+						text: [
+							'头条:' + datadb[3]
+						],
+						font: '26px Microsoft YaHei'
+					}
+				},
+			]
+		};
+		myChart.setOption(option);
+	</script>
+
+</html>

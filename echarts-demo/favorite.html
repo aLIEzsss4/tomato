@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<script src="echarts.common.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="main" style="width: 1170;height:600px;"></div>
+
+	</body>
+	<script type="text/javascript">
+		var myChart = echarts.init(document.getElementById('main'));
+		var data1 = [{
+				name: '顺意群体',
+				value: '400',
+				haogan: '20',
+				bfb: '40%'
+			},
+			{
+				name: '中立群体',
+				value: '200',
+				bfb: '20%'
+			},
+			{
+				name: '逆意群体',
+				value: '400',
+				haogan: '20',
+				bfb: '40%'
+			},
+		];
+		var data = []
+		for(var i = 0; i < 7; i++) {
+			data[i] = []
+		}
+		// var data2=[];
+		// var data3=[];
+		// var data4=[];
+		// var radio=[
+		//     {
+		//         'r':parseInt(data1[0].value/1+data1[1].value/1+data1[2].value/1),
+		//         'r1':parseInt(data1[0].value/1+r/1),
+
+		//     }];
+
+		console.log(data1)
+
+		//  for (var i = 0; i <=200; i++) {
+		//         var t = 2*i*Math.PI/360;
+		//         a = i*200*200/360
+		//         r = Math.sqrt(a)
+		//         //data[0].push([r*Math.cos(t), r*Math.sin(t)]);
+		//         data[0].push([Math.sqrt(Math.random(i)+0.1), i%360]);
+		//         data[1].push([Math.sqrt(Math.random(i)), i%360]);
+		//         data[2].push([Math.sqrt(Math.random(i)), i%360]);
+		//         data[3].push([Math.sqrt(Math.random(i)), i%360]);
+
+		//     }
+
+		for(var i = 0; i <= data1[0].value; i++) {
+			data[2].push([Math.sqrt(Math.random(i)), i % 360]);
+		}
+		for(var i = 0; i <= data1[1].value; i++) {
+			data[3].push([Math.sqrt(Math.random(i)), i % 360]);
+
+		}
+		for(var i = 0; i <= data1[2].value; i++) {
+			data[4].push([Math.sqrt(Math.random(i)), i % 360]);
+
+		}
+
+		for(var i = 0; i <= data1[0].haogan; i++) {
+
+			data[5].push([Math.random() * (0.35 - 0.15) + 0.15, Math.random() * 360]);
+
+		}
+		for(var i = 0; i <= data1[2].haogan; i++) {
+
+			data[6].push([Math.random() * (0.35 - 0.15) + 0.15, Math.random() * 360]);
+
+		}
+		console.log(data[6])
+		// console.log(data1[1],polar,data2,data3)
+		var polar = [];
+		var angleAxis = [];
+		var radiusAxis = [];
+		var series = [];
+		for(var i = 0; i < 3; i++) {
+			polar.push({
+				center: [20 + 30 * (i % 3) + '%', 45 + '%'],
+				radius: '110'
+			});
+			angleAxis.push({
+				show: false,
+				polarIndex: i,
+				type: 'value',
+				startAngle: 0,
+
+			});
+			radiusAxis.push({
+				show: false,
+				polarIndex: i,
+				// min: 0,
+			});
+		}
+		// console.log(polar)
+		// console.log(data2[0],polar)
+		option = {
+			title: {
+				text: '受众好感图',
+				subtext: '数据来源(数榜)',
+				sublink: 'https://github.com/aLIEzsss4/echarts',
+				x: 'left'
+
+			},
+			legend: {
+				data: ['kol账号', '普通账号', '推荐', '好感', '中度', '差评', '反感'],
+				bottom: '30',
+				right: '30',
+				orient: 'vertical',
+				selectedMode: false
+
+			},
+			tooltip: {
+				show: false
+			},
+			polar: polar,
+			angleAxis: angleAxis,
+			radiusAxis: radiusAxis,
+			graphic: [{
+					type: 'text',
+					id: 'text1',
+					z: 100,
+					left: '15%',
+					top: '65%',
+					style: {
+						fill: '#666',
+						text: [
+							'顺意群体:' + data1[0].bfb
+						],
+						font: '26px Microsoft YaHei'
+					}
+				},
+				{
+					type: 'text',
+					id: 'text2',
+					z: 100,
+					left: '45%',
+					top: '65%',
+					style: {
+						fill: '#666',
+						text: [
+							'中意群体:' + data1[1].bfb
+						],
+						font: '26px Microsoft YaHei'
+					}
+				},
+				{
+					type: 'text',
+					id: 'text3',
+					z: 100,
+					left: '75%',
+					top: '65%',
+					style: {
+						fill: '#666',
+						text: [
+							'逆意群体:' + data1[2].bfb
+						],
+						font: '26px Microsoft YaHei'
+					}
+				}
+
+			],
+			series: [{
+					coordinateSystem: 'polar',
+					name: '好感',
+					type: 'scatter',
+					data: data[2],
+					itemStyle: {
+						normal: {
+							color: '#f9d8d5'
+						}
+					},
+
+				},
+				{
+					coordinateSystem: 'polar',
+					name: 'kol账号',
+					type: 'effectScatter',
+					zlevel: 300,
+					data: [0, 0],
+					symbol: 'triangle',
+					symbolSize: '20',
+					itemStyle: {
+						normal: {
+							color: '#f7b2b3'
+						}
+					},
+				},
+				{
+					coordinateSystem: 'polar',
+					name: '推荐',
+					type: 'scatter',
+					data: data[5],
+					itemStyle: {
+						normal: {
+							color: '#f7b2b3'
+						}
+					},
+				},
+				{
+					coordinateSystem: 'polar',
+					name: '普通账号',
+					type: 'scatter',
+					data: [0, 0],
+					itemStyle: {
+						normal: {
+							color: '#f7b2b3'
+						}
+					}
+				},
+				{
+					coordinateSystem: 'polar',
+					name: '中度',
+					type: 'scatter',
+					data: data[3],
+					polarIndex: 1,
+					itemStyle: {
+						normal: {
+							color: '#fee572'
+						}
+					},
+				},
+				{
+					coordinateSystem: 'polar',
+					name: 'kol账号',
+					type: 'effectScatter',
+					zlevel: 300,
+					data: [0, 0],
+					symbol: 'triangle',
+					symbolSize: '20',
+					polarIndex: 1,
+					itemStyle: {
+						normal: {
+							color: '#fee572'
+						}
+					},
+				},
+				{
+					coordinateSystem: 'polar',
+					name: '差评',
+					type: 'scatter',
+					data: data[4],
+					polarIndex: 2,
+					itemStyle: {
+						normal: {
+							color: '#d1e8f8'
+						}
+					},
+				},
+				{
+					coordinateSystem: 'polar',
+					name: 'kol账号',
+					type: 'effectScatter',
+					zlevel: 300,
+					data: [0, 0],
+					symbol: 'triangle',
+					symbolSize: '20',
+					polarIndex: 2,
+					itemStyle: {
+						normal: {
+							color: '#9ecef0'
+						}
+					},
+				},
+				{
+					coordinateSystem: 'polar',
+					name: '反感',
+					type: 'scatter',
+					data: data[6],
+					polarIndex: 2,
+					itemStyle: {
+						normal: {
+							color: '#9ecef0'
+						}
+					},
+				},
+			]
+		};
+		myChart.setOption(option);
+	</script>
+
+</html>
