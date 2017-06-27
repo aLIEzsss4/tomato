@@ -34,8 +34,10 @@ var myChart = echarts.init(document.getElementById('main'));
 				data: ['微信DB值', '微博DB值', '知乎DB值', '头条DB值']
 			},
 			toolbox: {
+				show: true,
 				feature: {
-					saveAsImage: {}
+				    restore: {},
+				    saveAsImage: {}
 				}
 			},
 			grid: {
@@ -87,21 +89,6 @@ var myChart = echarts.init(document.getElementById('main'));
 						normal: {}
 					},
 					data: [320, 332, 301, 334, 390, 330, 320]
-				},
-				{
-					name: '总量DB值',
-					type: 'line',
-					stack: '总量',
-					label: {
-						normal: {
-							show: true,
-							position: 'top'
-						}
-					},
-					areaStyle: {
-						normal: {}
-					},
-					data: [820, 932, 901, 934, 1290, 1330, 1320]
 				}
 			]
 		};
