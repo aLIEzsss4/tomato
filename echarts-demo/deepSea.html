@@ -74,6 +74,29 @@
 					}();
 			
 		var option = {
+		     timeline: {
+            // y: 0,
+            axisType: 'category',
+            // realtime: false,
+            // loop: false,
+            // autoPlay: true,
+            // currentIndex: 2,
+            playInterval: 2000,
+             controlStyle:{
+                show: false,
+              },
+            // controlStyle: {
+            //     position: 'left'
+            // },
+            data: ['2017-01-01','2017-01-02','2017-01-03','2017-01-04','2017-01-05','2017-01-06','2017-01-07'
+            ],
+            label: {
+                formatter : function(s) {
+                    return (new Date(s)).getDate();
+                }
+            }
+        },
+    baseOption: {
 			title: {
 				text: '口碑舆情图',
 				subtext: '数据来源(数榜)',
@@ -90,13 +113,12 @@
 					return params.value[3]
 				}
 			},
-			
 			grid: {
 				show: true,
 				x: 100,
 				y: 80,
 				x2: 150,
-				y2: 60,
+				y2: 80,
 				//				 width: {totalWidth} - x - x2,
 				// height: {totalHeight} - y - y2,
 				backgroundColor: 'rgba(0,0,255,0)',
@@ -299,7 +321,7 @@
 					},
 				}
 			]
-		}
+		}}
 
 		myChart.setOption(option);
 		myChart.on('click',function(params){
