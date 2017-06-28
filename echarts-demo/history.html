@@ -16,8 +16,28 @@ var myChart = echarts.init(document.getElementById('main'));
 		
 	var option={
 			title: {
-				text: '历史曲线图'
+				text: '历史曲线图',
+				subtext: '数据来源(数榜)',
+				sublink: 'https://github.com/aLIEzsss4/echarts',
+				x: 'left',
+				textStyle: {
+					fontSize: 18,
+					fontWeight: 'bolder',
+					color: '#333' // 主标题文字颜色
+				},
 			},
+			toolbox: {
+			        show : true,
+			        feature : {
+			            mark : {show: true},
+			            magicType : {
+			                show: true,
+			                type: ['pie', 'funnel']
+			            },
+			            restore : {show: true},
+			            saveAsImage : {show: true}
+			        }
+			    },
 			tooltip: {
 				trigger: 'axis',
 				axisPointer: {
