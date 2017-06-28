@@ -74,8 +74,20 @@ var myChart = echarts.init(document.getElementById('main'));
 		}
 
 		option = {
-			// color:['#c2e1c5','#fac8a7','#abd9f2','#f1b1ad']
-			// ,
+			color:['#c2e1c5','#fac8a7','#abd9f2','#f1b1ad'],
+			
+			toolbox: {
+			        show : true,
+			        feature : {
+			            mark : {show: true},
+			            magicType : {
+			                show: true,
+			                type: ['pie', 'funnel']
+			            },
+			            restore : {show: true},
+			            saveAsImage : {show: true}
+			        }
+			    },
 			title: {
 				text: "DB总值",
 				subtext: '数据来源(数榜)',
