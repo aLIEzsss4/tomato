@@ -165,7 +165,20 @@ var myChart = echarts.init(document.getElementById('main'));
 						],
 						font: '26px Microsoft YaHei'
 					}
-				},
+				},{
+					type: 'text',
+					id: 'text5',
+					z: 100,
+					left: '35%',
+					top: '45%',
+					style: {
+						fill: '#333',
+						text: [
+							'DB总值:' + parseInt(datadb[3]+datadb[0]+datadb[1]+datadb[2])
+						],
+						font: '26px Microsoft YaHei'
+					}
+				}
 			]
 		};
 		myChart.setOption(option);
