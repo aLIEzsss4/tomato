@@ -19,17 +19,31 @@ var myChart = echarts.init(document.getElementById('main'));
 			data[i] = [];
 		}
 
-		var datadb = [2365, 4774, 6666, 7895]
-		for(var i = 0; i <= 200; i++) {
+			var datadb = [236, 474, 666, 795]
+		
+		
+		
+		for(var i = 0; i <= datadb[0]; i++) {
 			var t = 2 * i * Math.PI / 360;
 			a = i * 200 * 200 / 360
 			r = Math.sqrt(a)
 			//data[0].push([r*Math.cos(t), r*Math.sin(t)]);
 			data[0].push([Math.sqrt(Math.random(i)), i % 360]);
-			data[1].push([Math.sqrt(Math.random(i)), i % 360]);
-			data[2].push([Math.sqrt(Math.random(i)), i % 360]);
-			data[3].push([Math.sqrt(Math.random(i)), i % 360]);
-
+// 			data[1].push([Math.sqrt(Math.random(i)), i % 360]);
+// 			data[2].push([Math.sqrt(Math.random(i)), i % 360]);
+// 			data[3].push([Math.sqrt(Math.random(i)), i % 360]);
+		}
+		
+		
+		for(var i=0;i<=datadb[1];i++){
+		    	data[1].push([Math.sqrt(Math.random(i)), i % 360]);
+		}
+		
+		for(var i=0;i<=datadb[2];i++){
+		    	data[2].push([Math.sqrt(Math.random(i)), i % 360]);
+		}
+		for(var i=0;i<=datadb[3];i++){
+		    	data[3].push([Math.sqrt(Math.random(i)), i % 360]);
 		}
 		console.log(i)
 		var title = ['微信', '微博', '知乎', '头条'];
@@ -169,7 +183,7 @@ var myChart = echarts.init(document.getElementById('main'));
 					type: 'text',
 					id: 'text5',
 					z: 100,
-					left: '35%',
+					left: '45%',
 					top: '45%',
 					style: {
 						fill: '#333',
