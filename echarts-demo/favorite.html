@@ -36,41 +36,58 @@
 		for(var i = 0; i < 7; i++) {
 			data[i] = []
 		}
-		// var data2=[];
-		// var data3=[];
-		// var data4=[];
-		// var radio=[
-		//     {
-		//         'r':parseInt(data1[0].value/1+data1[1].value/1+data1[2].value/1),
-		//         'r1':parseInt(data1[0].value/1+r/1),
 
-		//     }];
-
-		console.log(data1)
-
-		//  for (var i = 0; i <=200; i++) {
-		//         var t = 2*i*Math.PI/360;
-		//         a = i*200*200/360
-		//         r = Math.sqrt(a)
-		//         //data[0].push([r*Math.cos(t), r*Math.sin(t)]);
-		//         data[0].push([Math.sqrt(Math.random(i)+0.1), i%360]);
-		//         data[1].push([Math.sqrt(Math.random(i)), i%360]);
-		//         data[2].push([Math.sqrt(Math.random(i)), i%360]);
-		//         data[3].push([Math.sqrt(Math.random(i)), i%360]);
-
-		//     }
-
-		for(var i = 0; i <= data1[0].value; i++) {
-			data[2].push([Math.sqrt(Math.random(i)), i % 360]);
+// 		console.log(data1)
+        for(var i=0;i<20;i++){
+            var a=0;
+            
+            
+        }
+        
+        
+        
+		for(var i = 0; i < 400; i++) {
+		    
+			data[2].push([Math.sqrt(Math.random(i)), i % 360,0,0]);
 		}
+// 		a为0或者1，随机20次为1,随机180次为0；
+		
+		for(var i=0;i<20;i++){
+		  var aa,bb=[];
+		  var aa= data[2][Math.round(Math.random()*(400-i)+i)].splice(2,1,1);
+		  //var bb=aa.push(1)
+		  var bb= data[2][Math.round(Math.random()*(400-i)+i)].splice(3,1,1);
+		}
+// 		console.log(aa,data[2])
+		
+		
+		
+		for(var i = 0; i < 400; i++) {
+		    
+			data[4].push([Math.sqrt(Math.random(i)), i % 360,0,0]);
+		}
+// 		a为0或者1，随机20次为1,随机180次为0；
+		
+		for(var i=0;i<20;i++){
+		  var aa,bb=[];
+		  var aa= data[4][Math.round(Math.random()*(400-i)+i)].splice(2,1,1);
+		  //var bb=aa.push(1)
+		  var bb= data[4][Math.round(Math.random()*(400-i)+i)].splice(3,1,1);
+		}
+		
+		
+		
+// 			for(var i = 0; i <100; i++) {
+// 			data[2].push([Math.sqrt(Math.random(i)), i+200 % 360,iskol=1]);
+// 		}
+// 		console.log(data[2])
+		
+		
 		for(var i = 0; i <= data1[1].value; i++) {
 			data[3].push([Math.sqrt(Math.random(i)), i % 360]);
 
 		}
-		for(var i = 0; i <= data1[2].value; i++) {
-			data[4].push([Math.sqrt(Math.random(i)), i % 360]);
-
-		}
+	
 
 		for(var i = 0; i <= data1[0].haogan; i++) {
 
@@ -82,16 +99,17 @@
 			data[6].push([Math.random() * (0.35 - 0.15) + 0.15, Math.random() * 360]);
 
 		}
-		console.log(data[6])
+// 		console.log(data[6])
 		// console.log(data1[1],polar,data2,data3)
 		var polar = [];
 		var angleAxis = [];
 		var radiusAxis = [];
 		var series = [];
+		var radius=['40%','20%','40%']
 		for(var i = 0; i < 3; i++) {
 			polar.push({
 				center: [20 + 30 * (i % 3) + '%', 45 + '%'],
-				radius: '110'
+				radius: radius[i]
 			});
 			angleAxis.push({
 				show: false,
@@ -106,8 +124,33 @@
 				// min: 0,
 			});
 		}
-		// console.log(polar)
-		// console.log(data2[0],polar)
+		
+		
+// 		var data3=[
+// 				{'value':'13','isCir':'1'},
+// 				{'value':'211','isCir':'0'},
+// 			]
+		
+//         function isSymblo(arr) {
+			
+// 			arr.map(function(obj){
+// 				var symbol = [];
+				
+// 				if(obj.isCir ==1) {
+// 					symbol = 'triangle'
+// 				}else{
+// 					symbol='circler'
+// 				}
+// 				console.log(symbol)
+// 				return symbol
+				
+// 			})
+			
+// 		};
+	   
+	    
+		
+	
 		option = {
 			title: {
 				text: '受众好感图',
@@ -116,18 +159,6 @@
 				x: 'left'
 
 			},
-			toolbox: {
-			        show : true,
-			        feature : {
-			            mark : {show: true},
-			            magicType : {
-			                show: true,
-			                type: ['pie', 'funnel']
-			            },
-			            restore : {show: true},
-			            saveAsImage : {show: true}
-			        }
-			    },
 			legend: {
 				data: ['kol账号', '普通账号', '推荐', '好感', '中度', '差评', '反感'],
 				bottom: '30',
@@ -190,12 +221,50 @@
 					coordinateSystem: 'polar',
 					name: '好感',
 					type: 'scatter',
-					data: data[2],
-					itemStyle: {
-						normal: {
-							color: '#f9d8d5'
-						}
-					},
+					data: data[2].map(function(node){
+					  
+        				// var symbol = [];
+        				// console.log(node);
+        				
+        				if(node[2] ==1) {
+        					symbol = 'triangle',
+        					symbolSize='12',
+        					symbolRotate=Math.random()*360,
+        					color='#f7b2b3'
+        				}else{
+        					symbol='circle',
+        					symbolSize='10',
+        					color='#f9d8d5';
+        					
+        					  if(node[3] ==1) {
+            					symbolSize='12',
+            					symbolRotate=Math.random()*360,
+            					color='#f7b2b3'
+            				}else{
+            					symbolSize='10',
+            					color='#f9d8d5'
+            				}
+        				}
+        			    
+        			  
+        			    
+        			    
+        			    
+        			
+					    return{
+					        value:[node[0],node[1]],
+					        symbol:symbol,
+					        symbolSize:symbolSize,
+					        symbolRotate:symbolRotate,
+					        itemStyle:{
+					            normal:{
+					                color:color
+					            }
+					        }
+					    }
+					   
+					}),
+			
 
 				},
 				{
@@ -203,9 +272,8 @@
 					name: 'kol账号',
 					type: 'effectScatter',
 					zlevel: 300,
-					data: [0, 0],
+					data: data[2][Math.random],
 					symbol: 'triangle',
-					symbolSize: '20',
 					itemStyle: {
 						normal: {
 							color: '#f7b2b3'
@@ -216,7 +284,7 @@
 					coordinateSystem: 'polar',
 					name: '推荐',
 					type: 'scatter',
-					data: data[5],
+					data: data[2][Math.random],
 					itemStyle: {
 						normal: {
 							color: '#f7b2b3'
@@ -251,9 +319,9 @@
 					name: 'kol账号',
 					type: 'effectScatter',
 					zlevel: 300,
-					data: [0, 0],
+					data: data[3][Math.random],
 					symbol: 'triangle',
-					symbolSize: '20',
+					symbolSize: '12',
 					polarIndex: 1,
 					itemStyle: {
 						normal: {
@@ -265,22 +333,65 @@
 					coordinateSystem: 'polar',
 					name: '差评',
 					type: 'scatter',
-					data: data[4],
+					data: 	data[4].map(function(node){
+					  
+        				// var symbol = [];
+        				// console.log(node);
+        				
+        				if(node[2] ==1) {
+        					symbol = 'triangle',
+        					symbolSize='12',
+        					symbolRotate=Math.random()*360,
+        					color='#9ecef0'
+        				}else{
+        					symbol='circle',
+        					symbolSize='10',
+        					color='#d1e8f8';
+        					
+        					  if(node[3] ==1) {
+            					symbolSize='12',
+            					symbolRotate=Math.random()*360,
+            					color='#9ecef0'
+            				}else{
+            					symbolSize='10',
+            					color='#d1e8f8'
+            				}
+        				}
+        			    
+        			  
+        			    
+        			    
+        			    
+        			
+					    return{
+					        value:[node[0],node[1]],
+					        symbol:symbol,
+					        symbolSize:symbolSize,
+					        symbolRotate:symbolRotate,
+					        itemStyle:{
+					            normal:{
+					                color:color
+					            }
+					        }
+					    }
+					   
+					}),
+			
 					polarIndex: 2,
-					itemStyle: {
-						normal: {
-							color: '#d1e8f8'
-						}
-					},
+				// 	itemStyle: {
+				// 		normal: {
+				// 			color: '#d1e8f8'
+				// 		}
+				// 	},
 				},
 				{
 					coordinateSystem: 'polar',
 					name: 'kol账号',
 					type: 'effectScatter',
 					zlevel: 300,
-					data: [0, 0],
+					data: data[4][Math.random],
 					symbol: 'triangle',
-					symbolSize: '20',
+					symbolSize: '12',
 					polarIndex: 2,
 					itemStyle: {
 						normal: {
@@ -292,7 +403,7 @@
 					coordinateSystem: 'polar',
 					name: '反感',
 					type: 'scatter',
-					data: data[6],
+					data: data[4][Math.random],
 					polarIndex: 2,
 					itemStyle: {
 						normal: {
