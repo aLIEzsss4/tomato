@@ -18,10 +18,9 @@ var myChart = echarts.init(document.getElementById('main'));
 		for(var i = 0; i < 4; i++) {
 			data[i] = [];
 		}
-
-			var datadb = [236, 474, 666, 795]
+			var datadb = [100, 200, 300,400]
 		
-		
+		var bfb=['10%','20%','30%','40%']
 		
 		for(var i = 0; i <= datadb[0]; i++) {
 			var t = 2 * i * Math.PI / 360;
@@ -47,7 +46,6 @@ var myChart = echarts.init(document.getElementById('main'));
 		}
 		console.log(i)
 		var title = ['微信', '微博', '知乎', '头条'];
-
 		// console.log(title)
 		var polar = [];
 		var angleAxis = [];
@@ -56,14 +54,13 @@ var myChart = echarts.init(document.getElementById('main'));
 		for(var i = 0; i < data.length; i++) {
 			polar.push({
 				center: [20 + 50 * (i % 2) + '%', (25 + 45 * Math.floor(i / 2)) + '%'],
-				radius: '35%'
+				radius: bfb[i]
 			});
 			angleAxis.push({
 				show: false,
 				polarIndex: i,
 				type: 'value',
 				startAngle: 0,
-
 			});
 			radiusAxis.push({
 				show: false,
@@ -83,10 +80,8 @@ var myChart = echarts.init(document.getElementById('main'));
 					}
 				},
 				data: data[i]
-
 			});
 		}
-
 		option = {
 			color:['#c2e1c5','#fac8a7','#abd9f2','#f1b1ad'],
 			
@@ -119,7 +114,6 @@ var myChart = echarts.init(document.getElementById('main'));
 			tooltip: {
 				show: false
 			},
-
 			angleAxis: angleAxis,
 			radiusAxis: radiusAxis,
 			series: series,
