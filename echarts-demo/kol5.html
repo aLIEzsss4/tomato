@@ -8,7 +8,20 @@
 	</head>
 	<body>
 		<div id="main" style="width: 1170px;height: 550px;"></div>
-		
+		<table border="0" cellspacing="10" cellpadding="0">
+			<tr><th>名称</th><th>占比</th></tr>
+			<tr><td>微博加v认证</td><td>25%</td></tr>
+			<tr><td>微博蓝v认证</td><td>40%</td></tr>
+			<tr><td>微博一般用户</td><td>100%</td></tr>
+			<tr><td>微信认证账号</td><td>20%</td></tr>
+			<tr><td>微信非认证账号</td><td>80%</td></tr>
+			<tr><td>知乎认证账号</td><td>20%</td></tr>
+			<tr><td>知乎非认证账号</td><td>70%</td></tr>
+			<tr><td>头条优秀回答者</td><td>39%</td></tr>
+			<tr><td>头条认证回答者</td><td>62%</td></tr>
+			<tr><td>头条一般用户</td><td>80%</td></tr>
+			
+		</table>
 	</body>
 	<script type="text/javascript">
 var myChart = echarts.init(document.getElementById('main'));
@@ -38,7 +51,6 @@ var data2=[
     {'name':'头条一般用户','radius':'80%','value':[80,0,0,0]},
 ]
 console.log(data2)
-
 option = {
 	
 title:{
