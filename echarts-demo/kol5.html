@@ -26,7 +26,7 @@
 	<script type="text/javascript">
 var myChart = echarts.init(document.getElementById('main'));
 var data={
-    name:['微博加v认证','微博蓝v认证','微博一般用户','微信认证账号','微信非认证账号','知乎认证账号','知乎非认证账号','头条优秀回答者','头条认证回答者','头条一般用户',''],
+    name:['微博加v认证','微博蓝v认证','微博一般用户','微信认证账号','微信非认证账号','头条认证账号','头条非认证账号','知乎优秀回答者','知乎认证回答者','知乎一般用户',''],
     sValue:['500','600','700','650'],
     cValue:['2000','0','0','1500'],
     oValue:['4000','4000','3000','3000'],
@@ -44,15 +44,15 @@ var data2=[
     {'name':'微博一般用户','radius':'100%','value':[100,0,0,0]},
     {'name':'微信认证账号','radius':'20%','value':[20,0,0,0]},
     {'name':'微信非认证账号','radius':'80%','value':[80,0,0,0]},
-    {'name':'知乎认证账号','radius':'20%','value':[20,0,0,0]},
-    {'name':'知乎非认证账号','radius':'70%','value':[70,0,0,0]},
-    {'name':'头条优秀回答者','radius':'39%','value':[39,0,0,0]},
-    {'name':'头条认证回答者','radius':'62%','value':[62,0,0,0]},
-    {'name':'头条一般用户','radius':'80%','value':[80,0,0,0]},
+    {'name':'头条认证账号','radius':'20%','value':[20,0,0,0]},
+    {'name':'头条非认证账号','radius':'70%','value':[70,0,0,0]},
+    {'name':'知乎优秀回答者','radius':'39%','value':[39,0,0,0]},
+    {'name':'知乎认证回答者','radius':'62%','value':[62,0,0,0]},
+    {'name':'知乎一般用户','radius':'80%','value':[80,0,0,0]},
 ]
 console.log(data2)
 option = {
-	
+    // color:['#fabe95','#fac19c','#fcedcd','#a5d9a6','#dbeedf','#f1b1ad','#f7d2d1','#4fb7ed','#99d3f1','#c8e7f4'],
 title:{
       text:'kol参与图'  
     },
@@ -91,13 +91,19 @@ title:{
             zlevel:3,
             label: {
                 normal: {
-                    show: false
+                    show: false,
+                     
                 },
             },
             lableLine: {
                 normal: {
                     show: false
                 },
+            },
+            itemStyle:{
+                normal:{
+                    color:'#f8aa76',
+                }  
             },
             data:data2[0].value
         },
@@ -119,6 +125,11 @@ title:{
                     show: false
                 },
             },
+             itemStyle:{
+                normal:{
+                    color:'#fac19c',
+                }  
+            },
            data:data2[1].value
         }, {
             name:data2[2].name,
@@ -137,6 +148,11 @@ title:{
                 normal: {
                     show: false
                 },
+            },
+             itemStyle:{
+                normal:{
+                    color:'#fce0cd',
+                }  
             },
            data:data2[2].value
         },
@@ -158,6 +174,11 @@ title:{
                     show: false
                 },
             },
+             itemStyle:{
+                normal:{
+                    color:'#b0d9b8',
+                }  
+            },
            data:data2[3].value
         },
         {
@@ -178,6 +199,11 @@ title:{
                     show: false
                 },
             },
+             itemStyle:{
+                normal:{
+                    color:'#dbeedf',
+                }  
+            },
           data:data2[4].value
         },
         {
@@ -197,6 +223,11 @@ title:{
                 normal: {
                     show: false
                 },
+            }, 
+            itemStyle:{
+                normal:{
+                    color:'#ee9c99',
+                }  
             },
            data:data2[5].value
         }, {
@@ -216,6 +247,11 @@ title:{
                 normal: {
                     show: false
                 },
+            },
+            itemStyle:{
+                normal:{
+                    color:'#f7d2d1',
+                }  
             },
             data:data2[6].value
         },
@@ -237,6 +273,11 @@ title:{
                     show: false
                 },
             },
+            itemStyle:{
+                normal:{
+                    color:'#4fb7ed',
+                }  
+            },
            data:data2[7].value
         },
         {
@@ -257,6 +298,11 @@ title:{
                     show: false
                 },
             },
+             itemStyle:{
+                normal:{
+                    color:'#99d6f5',
+                }  
+            },
            data:data2[8].value
         }, {
             name:data2[9].name,
@@ -275,6 +321,11 @@ title:{
                 normal: {
                     show: false
                 },
+            },
+              itemStyle:{
+                normal:{
+                    color:'#caeafa',
+                }  
             },
            data:data2[9].value
         },
