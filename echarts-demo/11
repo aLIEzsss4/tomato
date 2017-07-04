@@ -1,0 +1,343 @@
+var num_array=[40,120,480,40,360,40,140,40,140,400];
+function calculate(num_array){
+   result_array =[]
+    wb_num = num_array[0] + num_array[1] +num_array[2]
+    wx_num = num_array[3] + num_array[4]
+    tt_num = num_array[5] + num_array[6]
+    zh_num = num_array[7] + num_array[8] + num_array[9]
+    var base_num = wb_num
+    if (wx_num > base_num){
+        base_num = wx_num
+    }
+    if (tt_num > base_num){
+        base_num = tt_num
+    }
+    if (zh_num > base_num){
+        base_num = zh_num 
+    }
+    wb_rate =  Math.sqrt(parseFloat(wb_num)/parseFloat(base_num))
+    wx_rate =  Math.sqrt(parseFloat(wx_num)/parseFloat(base_num))
+    tt_rate =  Math.sqrt(parseFloat(tt_num)/parseFloat(base_num))
+    zh_rate =  Math.sqrt(parseFloat(zh_num)/parseFloat(base_num))
+    result_array[0] = Math.sqrt(parseFloat(num_array[0])/wb_num)*wb_rate*100
+    result_array[1] = Math.sqrt(parseFloat(num_array[0]+num_array[1])/wb_num)*wb_rate*100
+    result_array[2] = 100*wb_rate
+    result_array[3] = Math.sqrt(parseFloat(num_array[3])/wx_num)*wx_rate*100
+    result_array[4] = 100*wx_rate
+    result_array[5] = Math.sqrt(parseFloat(num_array[5])/tt_num)*tt_rate*100
+    result_array[6] = 100*tt_rate
+    result_array[7] = Math.sqrt(parseFloat(num_array[7])/zh_num)*zh_rate*100
+    result_array[8] = Math.sqrt((num_array[7]+num_array[8])/zh_num)*zh_rate*100
+    result_array[9] = 100*zh_rate
+    console.log(result_array)
+    return result_array
+}
+result_array = calculate(num_array)
+var data={
+    name:['微博加v认证','微博蓝v认证','微博一般用户','微信认证账号','微信非认证账号','头条认证账号','头条非认证账号','知乎优秀回答者','知乎认证回答者','知乎一般用户',''],
+    sValue:['500','600','700','650'],
+    cValue:['2000','0','0','1500'],
+    oValue:['4000','4000','3000','3000'],
+    sRatio:['25%','20%','20%','39%'],
+    cRatio:['40%','','','20%'],
+    oRatio:['100%','80%','70%','41%'],
+    wbkol:['wb1','wb2','wb3','wb4','wb5'],
+    wxkol:['wx1','wx2','wx3','wx4','wx5'],
+    zhkol:['zh1','zh2','zh3','zh4','zh5'],
+    ttkol:['tt1','tt2','tt3','tt4','tt5']
+};
+var data2=[
+    {'name':'微博加v认证','radius':result_array[0]+'%','value':[25,0,0,0]},
+    {'name':'微博蓝v认证','radius':result_array[1]+'%','value':[40,0,0,0]},
+    {'name':'微博一般用户','radius':result_array[2]+'%','value':[100,0,0,0]},
+    {'name':'微信认证账号','radius':result_array[3]+'%','value':[20,0,0,0]},
+    {'name':'微信非认证账号','radius':result_array[4]+'%','value':[80,0,0,0]},
+    {'name':'头条认证账号','radius':result_array[5]+'%','value':[20,0,0,0]},
+    {'name':'头条非认证账号','radius':result_array[6]+'%','value':[70,0,0,0]},
+    {'name':'知乎优秀回答者','radius':result_array[7]+'%','value':[39,0,0,0]},
+    {'name':'知乎认证回答者','radius':result_array[8]+'%','value':[62,0,0,0]},
+    {'name':'知乎一般用户','radius':result_array[9]+'%','value':[80,0,0,0]}
+]
+// console.log(data2)
+option = {
+    // color:['#fabe95','#fac19c','#fcedcd','#a5d9a6','#dbeedf','#f1b1ad','#f7d2d1','#4fb7ed','#99d3f1','#c8e7f4'],
+title:{
+      text:'kol参与图'  
+    },
+    tooltip: {
+        trigger: 'item',
+        // formatter: "{a} <br/>{b}: {c} ({d}%)",
+        formatter:function(params,data){
+            
+            return params.seriesName+ '<br/>'+ params.data+'%';
+            
+        }
+    },	
+    toolbox: {
+                show: true,
+                feature: {
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+    legend: {
+        selectedMode:false,
+        orient: 'vertical',
+       right:10,
+        bottom:10,
+        data:data.name,
+    },
+    series: [
+         {
+            name:data2[0].name,
+            type:'pie',
+            radius : [0, data2[0].radius],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            startAngle:180,
+            zlevel:3,
+            label: {
+                normal: {
+                    show: false,
+                     
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+            itemStyle:{
+                normal:{
+                    color:'#f8aa76',
+                }  
+            },
+            data:data2[0].value
+        },
+        {
+            name:data2[1].name,
+            type:'pie',
+            radius : [0, data2[1].radius],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            startAngle:180,
+            zlevel:2,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+             itemStyle:{
+                normal:{
+                    color:'#fac19c',
+                }  
+            },
+           data:data2[1].value
+        }, {
+            name:data2[2].name,
+            type:'pie',
+             radius : [0, data2[2].radius],
+            center : ['50%', '50%'],
+            roseType : 'area',
+            startAngle:180,
+            zlevel:1,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+             itemStyle:{
+                normal:{
+                    color:'#fce0cd',
+                }  
+            },
+           data:data2[2].value
+        },
+         {
+            name:data2[3].name,
+            type:'pie',
+            radius : [0, data2[3].radius],
+            center : ['55%', '50%'],
+            roseType : 'area',
+            startAngle:90,
+            zlevel:3,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+             itemStyle:{
+                normal:{
+                    color:'#b0d9b8',
+                }  
+            },
+           data:data2[3].value
+        },
+        {
+           name:data2[4].name,
+            type:'pie',
+          radius : [0, data2[4].radius],
+            center : ['55%', '50%'],
+            roseType : 'area',
+            startAngle:90,
+            zlevel:2,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+             itemStyle:{
+                normal:{
+                    color:'#dbeedf',
+                }  
+            },
+          data:data2[4].value
+        },
+        {
+           name:data2[5].name,
+            type:'pie',
+            radius : [0, data2[5].radius],
+            center : ['55%', '55%'],
+            roseType : 'area',
+            startAngle:0,
+            zlevel:4,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            }, 
+            itemStyle:{
+                normal:{
+                    color:'#ee9c99',
+                }  
+            },
+           data:data2[5].value
+        }, {
+           name:data2[6].name,
+            type:'pie',
+            radius : [0,data2[6].radius],
+            center : ['55%', '55%'],
+            roseType : 'area',
+            startAngle:0,
+            zlevel:3,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+            itemStyle:{
+                normal:{
+                    color:'#f7d2d1',
+                }  
+            },
+            data:data2[6].value
+        },
+        {
+           name:data2[7].name,
+            type:'pie',
+            radius : [0,data2[7].radius],
+            center : ['50%', '55%'],
+            roseType : 'area',
+            startAngle:270,
+            zlevel:3,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+            itemStyle:{
+                normal:{
+                    color:'#4fb7ed',
+                }  
+            },
+           data:data2[7].value
+        },
+        {
+           name:data2[8].name,
+            type:'pie',
+            radius : [0,data2[8].radius],
+            center : ['50%', '55%'],
+            roseType : 'area',
+            startAngle:270,
+            zlevel:2,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+             itemStyle:{
+                normal:{
+                    color:'#99d6f5',
+                }  
+            },
+           data:data2[8].value
+        }, {
+            name:data2[9].name,
+            type:'pie',
+            radius : [0,data2[9].radius],
+            center : ['50%', '55%'],
+            roseType : 'area',
+            startAngle:270,
+            zlevel:1,
+            label: {
+                normal: {
+                    show: false
+                },
+            },
+            lableLine: {
+                normal: {
+                    show: false
+                },
+            },
+              itemStyle:{
+                normal:{
+                    color:'#caeafa',
+                }  
+            },
+           data:data2[9].value
+        },
+       
+        
+    ]
+   
+}
