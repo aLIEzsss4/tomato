@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>DB值构成</title>
+		<script src="js/echarts.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="echarts.common.min.js" type="text/javascript" charset="utf-8"></script>-->
+
+	</head>
+
+	<body>
+		<div id="main" style="width: 1170px;height:550px;padding:10%;"></div>
+
+	</body>
+	<script type="text/javascript">
+		var myChart = echarts.init(document.getElementById('main'));
+		
+		
+		
+		var   data=[{
+					value: [200, 100, 500],
+					name: 'DB值'
+				}];
+		option = {
+			color: ['#ffd70d'],
+			title: {
+				text: '基础雷达图'
+			},
+			tooltip: {},
+			legend: {
+				data: ['DB值']
+			},
+			radar: {
+				// shape: 'circle',
+				indicator: [{
+						name: '参与度',
+						max: 600
+					},
+					{
+						name: '传播度',
+						max: 600
+					},
+					{
+						name: '好感度',
+						max: 600
+					},
+
+				]
+			},
+			series: [{
+				name: '预算 vs 开销（Budget vs spending）',
+				type: 'radar',
+				itemStyle: {
+					normal: {
+						areaStyle: {
+							type: 'default'
+						}
+					}
+				},
+				data: [{
+					value: [200, 100, 500],
+					name: 'DB值'
+				}, ]
+			}]
+		};
+		myChart.setOption(option)
+	</script>
+
+</html>
