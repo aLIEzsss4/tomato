@@ -1,0 +1,167 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+body{
+	background-color: #fcfcf7;
+	font-size: 12px;
+}
+a{
+	text-decoration: none;
+}
+.clearfix{
+	zoom: 1;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.content {
+	margin: 0 auto;
+	width: 1170px;
+
+}
+
+
+/*解决方案*/
+.banner{
+	margin-left: 20px;
+	height: 400px;
+}
+.solutionItem{
+	width: 100%;
+	height: 400px;
+	padding: 60px 0;
+}
+.itemImg{
+
+
+}
+.solutionItem2{
+	width: 100%;
+	height: 400px;
+	padding: 60px 0;
+	background-color: #f8f8f8;
+}
+.itemImg1{
+	background-image: url(img1.png);
+	width: 700px;
+	height: 400px;
+	float: left;
+}
+.itemImg2{
+	background-image: url(img2.png);
+	width: 700px;
+	height: 400px;
+	float: right;
+}
+.itemImg3{
+	width: 700px;
+	height: 400px;
+	background-image: url(img3.png);
+	float: left;
+	
+}
+.itemTxt{
+	float: right;
+	width: 370px;
+	margin-left: 35px;
+	position: relative;
+	right: 0;
+	top: 0;
+}
+.h2Tit{
+	color: #ffd70d;
+	font-size: 28px;
+	position: absolute;
+	margin-top: 40px;
+	right: 0;
+}
+.h2En{
+	font-size: 20px;
+	margin-top: 90px;
+	float: right;
+	
+}
+.info{
+	display: block;
+	margin-top: 40px;
+	float: right;
+	font-size: 14px;
+	color: #666;
+	text-align: right;
+}
+.Btn{
+	margin-top: 122px;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 40px;
+	display: block;
+	width: 160px;
+	height: 40px;
+	background-color: #FFD70D;
+	color: #fff;
+	box-sizing: border-box;
+	border: 1px solid #FFD70D;
+	float: right;
+	
+}
+/*.Btn:hover{
+	background-color: #FFD70D;
+	color: #fff;
+}*/
+.itemTxt2{
+	float: left;
+	width: 370px;
+	margin-left: 35px;
+	position: relative;
+	right: 0;
+	top: 0;
+}
+.h2Tit2{
+	color: #ffd70d;
+	font-size: 28px;
+	position: absolute;
+	margin-top: 40px;
+	top: 0;
+}
+.h2En2{
+	font-size: 20px;
+	margin-top: 90px;
+	float: left;
+	
+}
+.info2{
+	display: block;
+	margin-top: 40px;
+	float:left;
+	font-size: 14px;
+	color: #666;
+	text-align: left;
+}
+.Btn2{
+	margin-top: 122px;
+	border-radius: 4px;
+	text-align: center;
+	line-height: 40px;
+	display: block;
+	width: 160px;
+	height: 40px;
+	background-color: #FFD70D;
+	color: #fff;
+	box-sizing: border-box;
+	border: 1px solid #FFD70D;
+	float: left;
+	
+}
