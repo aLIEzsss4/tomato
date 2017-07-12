@@ -27,7 +27,6 @@ Author: Lorenzo Cioni - https://github.com/lorecioni
 		this.each(function() {
 		
 			var input=$('.sea')||$('.sySea')
-			console.log(input)
 			//Proposals
 			var proposals = $('<div></div>')
 				.addClass('proposal-box')

@@ -184,6 +184,13 @@ border-bottom: 1px solid #FFD70D;
 	bottom: 0;*/
 	user-select: none;
 }
+.bannerTit{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%);
+}
+
 .h2Tit{
 	color: #fff;
 	font-size: 72px;
@@ -241,22 +248,34 @@ border-bottom: 1px solid #FFD70D;
 }
 .bili{
 	color: #fff;
-	font-size: 24px;
+	font-size: 10px;
 	position: absolute;
 	left: 70%;
 	top: 60%;
 	 animation: blink 1.2s linear infinite; 
 
 }
-.bili:nth-child(2){
+.bili2{
+	color: #fff;
+	font-size: 14px;
+	position: absolute;
+	 animation: blink2 2.3s linear infinite; 
 	left: 20%;
 	top: 20%;
 }
-.bili:nth-child(3){
+.bili3{
+	color: #fff;
+	font-size: 18px;
+	position: absolute;
+	 animation: blink3 1.8s linear infinite; 
 	left: 50%;
 	top: 20%;
 }
-.bili:nth-child(4){
+.bili4{
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	 animation: blink4 2.2s linear infinite; 
 	left: 20%;
 	top: 50%;
 }
@@ -266,20 +285,48 @@ border-bottom: 1px solid #FFD70D;
 
   50%{opacity: 0.3;}
 
-  50.01%{opacity: 0.2;} /* 注意这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
+  50.01%{opacity: 0.2;} /* 这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
 
   100%{opacity: 0.8;}
 
 }
+@keyframes blink2{
 
+  0%{opacity: 0.5;}
 
+  50%{opacity: 0.1;}
+
+  50.01%{opacity: 0.2;} /* 这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
+
+  100%{opacity: 0.6;}
+}
+@keyframes blink3{
+
+  0%{opacity: 0.5;}
+
+  50%{opacity: 0.1;}
+
+  50.01%{opacity: 0.2;} /* 这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
+
+  100%{opacity: 0.6;}
+}
+@keyframes blink4{
+
+  0%{opacity: 0.5;}
+
+  50%{opacity: 0.1;}
+
+  50.01%{opacity: 0.2;} /* 这里定义50.01%立刻透明度为０，可以设置闪烁效果 */
+
+  100%{opacity: 0.6;}
+}
 .zw{
 	position: static;
 	height: 1000px;
 }
 
 .dbRank{
-	height: 1000px;
+	/*height: 1000px;*/
 	background-color: #fcfcf7;
 	
 }
@@ -289,6 +336,7 @@ border-bottom: 1px solid #FFD70D;
 .h3Tit{
 	color: #ffd70d;
 	font-size: 28px;
+	font-weight: 500;
 	line-height: 40px;	
 }
 .h3EnTit{
@@ -306,8 +354,18 @@ border-bottom: 1px solid #FFD70D;
 	line-height: 17px;
 	margin-top: 10px;
 }
+.h3color{
+	display: inline-block;
+	
+	color: #FFD70D;
+	margin-top: 10px;
+}
+
+
+/*排行榜单*/
+
 .dbBtn{
-	margin: 22px auto;
+	margin: 0px auto 20px;
 	width: 270px;
 	height: 24px;
 	padding: 20px;
@@ -320,19 +378,21 @@ border-bottom: 1px solid #FFD70D;
 	line-height: 24px;
 	box-sizing: border-box;
 	border: 1px solid #999;
-	margin-right: 40px;
+	margin:0 20px;
 	color: #999;
 	background: #fff;
 	border-radius: 4px;
 }
 .dayBtn:hover{
-	color: red;
-	border: 1px solid red;	
+	color: #Fff;
+	background-color: #FFD70D;
+	border: 1px solid #FFD70D;
+	
 }
 /*激活状态*/
 .ac {
-	color: #Fff;
-	background-color: #FFD70D;
+	color: #FFD70D;
+	background-color: #fff;
 	border: 1px solid #FFD70D;
 }
 
@@ -343,49 +403,29 @@ border-bottom: 1px solid #FFD70D;
 	position: relative;
 	 height: 175px;
 }
-.king2 {
-	display: inline-block;
-	width: 240px;
-	height: 152px;
-	border-radius: 6px;
-	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	
-}
-.king1{
-	display: inline-block;
-	width: 270px;
-	height: 175px;
-	border-radius: 6px;
-	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	position: absolute;	
-	left:290px ;
-	bottom: 0;
-}
-.king3{
-	display: inline-block;
-	width: 200px;
-	height: 136px;
-	border-radius: 6px;
-	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	position: absolute;	
-	right: 0;
-	bottom: 0;
-}
+
+
+
 .dbTable{
 	margin: 20px auto;
-
-	
-	
+	position: relative;
 }
+.deadline{
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+	position: absolute;
+	right: 0;
+	top: 50px;
+}
+
+
 .dbTable table{
 	width: 100%;
 	border: 0px solid #fff;
 	box-sizing: border-box;
 	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-	
+
 }
 .dbTable td,th {
 	height: 40px;
@@ -397,14 +437,29 @@ border-bottom: 1px solid #FFD70D;
 	
 }
 .dbTable th{
-	color: #262626;
+	color: #333;
 	background-color: #f2f2f2;
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 500;
+	
 }
+
 .dbTable tr:nth-child(odd) td{
 	background-color: #FCFCF7;
-	color: black;
+	color: #666;
+}
+.dbTable tr:nth-child(-n+4){
+	font-size: 16px;
+}
+.dbTable tr td:last-child{
+	color: #FFD70D;
+}
+.tabular{
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	color: #666;
+	
 }
 .moreBtn {
 	display: block;
@@ -414,7 +469,7 @@ border-bottom: 1px solid #FFD70D;
 	color: #fff;
 	border-radius: 4px;
 	line-height: 40px;
-	margin: 20px auto  60px;
+	margin: 47px auto  60px;
 
 }
 .toDay{
@@ -457,7 +512,6 @@ position: relative;
 }
 .service {
 	height: 700px;
-
 }
 .serItem{
 		margin-top: 20px;
@@ -468,47 +522,77 @@ position: relative;
 	padding: 20px;
 	border-radius: 4px;
 	background-color: #fff;
-	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
-		float: left;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.08);
+	float: left;
 	position: relative;
 }
+.itemList:hover{
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+	
+}
+
+
 .itemList:nth-child(2){
-	margin: 0 50px;
+	margin: 0 60px;
 }
 .itemImg {
 	display: inline-block;
 	height: 160px;
-	width: 230px;
-	background-color: #d8d8d8;
+	width: 160px;
+	background-image: url(Dashboard.png);
+	background-repeat: no-repeat;
+}
+.itemImg2{
+	display: inline-block;
+	height: 160px;
+	width: 160px;
+	background-repeat: no-repeat;
+	background-image: url(Mindshare.png);
+}
+.itemImg3{
+	display: inline-block;
+	height: 160px;
+	width: 160px;
+	background-repeat: no-repeat;
+	background-image: url(Customization.png);
+}
+.itemImg img{
+	margin: 0;
+	padding: 0;
 }
 .bar{
 	
 	display: block;
-	margin: 20px auto;
-	width: 30px;
-	height: 4px;
-	background-color: #FFD70D;
+	margin: 20px  auto 0;
+	font-size: 16px;
+	color: #FFD70D;
+	line-height: 22px;
 }
 .itemName{
 	display: block;
 	color: #333;
-	font-size: 16px;
-	line-height: 22px;
+	font-size: 12px;
+	line-height: 17px;
 }
 .itemInt {
 	display: block;
-	width: 286px;
+	width: 230px;
 	margin: 0 auto;
-	margin-top: 10px;
+	margin-top: 20px;
+	font-size: 14px;
 	color: #666;
 	line-height: 17px;
 
 }
 .serBtn{
-	    position: absolute;
-    margin: 20px auto 40px;
-    bottom: 0;
-    left: 95px;
+	box-sizing: border-box;
+	border: 1px solid #FFD70D;
+	background-color: #fff;
+	color: #FFD70D;
+}
+.serBtn:hover{
+	background-color:#FFD70D;
+	color: #fff;
 }
 
 /*获取焦点效果
@@ -527,10 +611,12 @@ position: relative;
 }
 .aboutTxt {
 	display: inline-block;
-	margin-top: 20px;
+	margin-top: 40px;
 	font-size: 16px;
+	width: 942px;
 	color: #333;
 	line-height: 24px;
+	color: #333;
 	
 }
 /*首页结束*/
@@ -538,5 +624,71 @@ position: relative;
 
 
 /*底部开始*/
-
+.footer{
+	background-color: #848484;
+	width: 100%;
+	height: 236px;
+}
+.footMain{
+	/*float: left;*/
+	margin: 0 auto;
+	width: 1170px;
+	/*padding: 20px;*/
+	height: 216px;
+	
+}
+.footItem{
+	float: left;
+	width: 292.5px;
+	margin-top: 25px;
+	text-align: center;
+	color: #fff;
+	box-sizing: border-box;
+}
+.footItem:nth-child(2){
+	box-sizing: border-box;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+}
+.footTit{
+	display: block;
+	line-height: 17px;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+.footA{
+	display: block;
+	font-size: 12px;
+	margin-bottom: 20px;
+	color: #DCDCDC;
+}
+.QRcode{
+	float: left;
+	width:100px ;
+	margin-right: 20px;
+	height: 130px;
+}
+.QRimg{
+	width: 100px;
+	height: 100px;
+}
+.QRimg img{
+	width: 100px;
+	height: 100px;
+}
+.QRtxt{
+	margin: 10px auto 0;
+	color: #DCDCDC;
+	font-size: 12px;
+}
+.WIPO{
+	display: block;
+	width: 100%;
+	height: 25px;
+	font-size: 12px;
+	background-color: #666666;
+	text-align: center;
+	color: #DCDCDC;
+	line-height: 25px;
+}
 /*底部结束*/

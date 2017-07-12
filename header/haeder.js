@@ -2,6 +2,7 @@ window.onload=function(){
 	
 	var search =document.querySelector('.search  ');
 		nav =document.querySelector('.native');
+		sea=document.querySelector('#sea')
 	   var scrollFunc = function (e) {  
         e = e || window.event;  
         if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件                 
@@ -13,6 +14,8 @@ window.onload=function(){
             if (e.wheelDelta < 0) { //当滑轮向下滚动时   
                 search.style.top=0+'px';
                   nav.style.top=80+'px'; 
+//                sea.value='';
+//                console.log(sea.value)
             }  
         } else if (e.detail) {  //Firefox滑轮事件  
             if (e.detail> 0) { //当滑轮向上滚动时  
@@ -23,8 +26,11 @@ window.onload=function(){
             if (e.detail< 0) { //当滑轮向下滚动时  
                search.style.top= 0+'px';
                 nav.style.top=80+'px';
+                  search.value='';
+                
             }  
         }  
+//      console.log(e.wheelData,e.detail,e.scr)
     }  
     //给页面绑定滑轮滚动事件  
     if (document.addEventListener) {//firefox  
@@ -62,7 +68,7 @@ window.onload=function(){
 	}
 	subS.onmouseleave=function(){
 		subM.style.display='none';
-		
 	}
+	
 	
 }
