@@ -12,19 +12,24 @@ input{
 }
 
 .loginbox {
-	width: 300px;
-	height: 530px;
-	position: absolute;
+	/*width: 300px;*/
+	/*height: 530px;*/
+	/*position: absolute;
 	margin:auto;
  	left:0;
  	right:0;
  	top:0;
- 	bottom:0;
+ 	bottom:0;*/
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 50%;
+ 	transform: translate(-50%,-50%);
 }
 .loginbox .logo {
 	width: 214px;
 	height: 70px;
 	margin: 10px auto 60px;
+	background-image: url(../img/登陆注册页logo_03.png);
 }
 .loginbox .loginform ul li{
 	
@@ -33,7 +38,7 @@ input{
 .loginbox .loginform input {
 	box-sizing: border-box;
 	width: 300px;
-	height: 50px;
+	height: 40px;
 	margin: 0 auto 10px;
 	padding: 5px;
 	border: 1px solid #cccbc6;
@@ -65,11 +70,11 @@ input::-webkit-input-placeholder{
 	width: 22px;
 	height: 22px;
 	position: absolute;
-	left: 14px;
+	left: 15px;
 	
-	top: 14px;
+	top: 10px;
 	overflow: hidden;
-	background-image: url(../img/切图.png);
+	background-image: url(../注册.png);
 	background-repeat: no-repeat;
 }
 .loginbox .loginform ul li::after{
@@ -79,7 +84,7 @@ input::-webkit-input-placeholder{
 	background-color: #cccbc6;
 	position: absolute;
 	left: 50px;
-	top: 14px;
+	top: 10px;
 	
 }
 .loginbox .loginform ul li:last-child i {
@@ -161,7 +166,7 @@ input::-webkit-input-placeholder{
 	display: block;
 	width: 64px;
 	height: 64px;	
-	background-image: url(../img/切图.png);
+	background-image: url(../注册.png);
 	background-repeat: no-repeat;
 	background-position: 0 -30px;
 }
@@ -193,20 +198,88 @@ input::-webkit-input-placeholder{
 	top: 0;
 }
 .loginbox .loginform .registerform li:nth-child(1) i  {
-	background-position: -88px 0;
+	background-position: -0px 0;
 }
 .loginbox .loginform .registerform li:nth-child(1) input:focus+i{
-	background-position: -110px 0;
+	background-position: -0px -22px;
 }
 .loginbox .loginform .registerform li:nth-child(2) i  {
-	background-position: -44px 0;
+	background-position: -22px 0;
 }
 .loginbox .loginform li:nth-child(2) input:focus+i{
-	background-position: -66px 0;
+	background-position: -22px -22px;
 }
 .loginbox .loginform .registerform li:nth-child(3) i  {
-	background-position: -132px 0;
+	background-position: -44px 0;
 }
 .loginbox .loginform li:nth-child(3) input:focus+i{
+	background-position: -44px -22px;
+}
+.loginbox .loginform .registerform li:nth-child(4) i  {
+	background-position: -66px 0;
+}
+.loginbox .loginform li:nth-child(4) input:focus+i{
+	background-position: -66px -22px;
+}
+.loginbox .loginform .registerform li:nth-child(5) i  {
+	background-position: -88px 0;
+}
+.loginbox .loginform li:nth-child(5) input:focus+i{
+	background-position: -88px -22px;
+}
+.loginbox .loginform .registerform li:nth-child(6) i  {
+	background-position: -110px 0;
+}
+.loginbox .loginform li:nth-child(6) input:focus+i{
+	background-position: -110px -22px;
+}
+.loginbox .loginform .registerform li:nth-child(7) i  {
+	background-position: -132px 0;
+}
+.loginbox .loginform li:nth-child(7) input:focus+i{
+	background-position: -132px -22px;
+}
+.loginbox .loginform .registerform li:nth-child(8) i  {
 	background-position: -154px 0;
+}
+.loginbox .loginform li:nth-child(8) input:focus+i{
+	background-position: -154px -22px;
+}
+.loginbox .loginform .registerform li:nth-child(9) i  {
+	background-position: -176px 0;
+}
+.loginbox .loginform li:nth-child(9) input:focus+i{
+	background-position: -176px -22px;
+}
+.loginbox .loginform .registerform li:nth-child(10) i  {
+	background-position: -198px 0;
+}
+.loginbox .loginform li:nth-child(10) input:focus+i{
+	background-position: -198px -22px;
+}
+
+
+
+#errTxt{
+	color:#ff320d  ;
+	position: absolute;
+	right: 0;
+}
+#errTxt2{
+	color:#ff320d  ;
+	position: absolute;
+	left: -192px;
+}
+#errTxt3{
+	color:#ff320d  ;
+	position: absolute;
+	left:-223px;
+}
+.fixed{
+	font-size: 12px;
+	color: #666;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
 }

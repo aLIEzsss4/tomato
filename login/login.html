@@ -5,42 +5,36 @@
 	<title>canvas</title>
 	<style>body{text-align: center;overflow: hidden;background:#fcfcf7 ;}#canvas{display: inline-block;}</style>
 	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<link rel="shortcut icon" type="image/x-icon" href="img/11.png"/>
 </head>
 <body>
-	
 	<canvas id="canvas"></canvas>
 	<div class="loginbox">
 		<div class="logo">
 			
 		</div>
 		<div class="loginform">
+			
 			<form action="" method="post">
-				<ul class="registerform">
-					<li><input type="text" value="" placeholder="姓名"/><i></i></li>
-					<li><input type="text" value="" placeholder="性别"/><i></i></li>
-					<li><input type="email" value="" placeholder="邮箱"/><i></i></li>
-					<li><input type="text" value="" placeholder="我的公司"/><i></i></li>
-					<li><input type="text" value="" placeholder="我的职位"/><i></i></li>
-					<li><input type="tel" value="" placeholder="手机号"/><i></i></li>
+				
+				<ul>
+					<li><input type="text" value="" placeholder="手机/邮箱"/><i></i></li>
 					<li><input type="password" value="" placeholder="请输入密码"/><i></i></li>
-					<li><input type="password" value="" placeholder="请确认密码"/><i></i></li>
-					<li><input type="text" value="" placeholder="请输入图片验证码"/><i></i></li>
-					<li><input type="text" value="" placeholder="请输入验证码"/><i></i></li>
 				</ul>
-				<span class="read"><input type="checkbox" name="" id="" value=""/><label for="">同意</label><a href="#">《DBRank用户使用协议》</a></span>
-				<span id="errTxt">验证码输入有误</span>
-				<input type="submit" value="注册"/>
+				<span id="errTxt2">账号或密码输入错误</span>
+				
+				<span><a href="#">找回密码</a></span>
+				<input type="submit" value="登录"/>
+				
 			</form>
-			<span id="swithLogin">已有账号？马上<a href="#">登录</a></span>
+			<span>没有账号？马上<a href="#">注册</a></span>
 		</div>
-		
 		
 	</div>
 	
 	<div class="fixed">版权所有 北京果岸咨询有限公司 (c) Copyright 2017 -. All Rights Reserved. 
 			
 		</div>
-	
 	
 	<script>
 		//定义画布宽高和生成点的个数
