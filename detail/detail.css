@@ -9,6 +9,12 @@ body{
 	background-color: #fcfcf7;
 	font-size: 12px;
 }
+.clearfix{
+	overflow: auto;
+}
+.fix{
+	content: '';
+}
 .fl {
 	float: left;
 }
@@ -142,6 +148,7 @@ body{
 	margin-right: 10px;
 	font-size: 12px;
 	background-color: #fff;
+	cursor: pointer;
 }
 .ac {
 	border: 1px #ffd70d solid;
@@ -170,7 +177,7 @@ svg{
 	
 }
 .picInt{
-	height: 200px;
+	/*height: 200px;*/
 	padding: 20px;
 	border-radius: 4px;
 	
@@ -187,9 +194,16 @@ svg{
 	line-height: 35px;
 	color: #999;
 	font-size: 12px;
+	margin-bottom: 20px;
+}
+.chartTxt{
+	color: #333;
+	font-size: 12px;
+	line-height: 18px;
 }
 .conFoot{
 	/*margin-bottom: 60px;*/
+	/*width: 1170px;*/
 }
 .footRank{
 	margin-top: 20px;
@@ -203,7 +217,7 @@ svg{
  	width: 530px;
  	height: 112px;
  	box-sizing: border-box;
- 	border-bottom: 1px solid #dcdcdc;
+ 	border-top: 1px solid #dcdcdc;
  }
 .wbL{
 	position: relative;
@@ -356,18 +370,36 @@ svg{
 /*KOL微博*/
 
 
-.more {
-	margin: 20px auto;
-	width: 92px;
-	height: 24px;
-	line-height: 24px;
-	background-color: #ffd70d;
-	text-align: center;
-	border-radius: 4px;
-	color: #fff;
+/*热点推送*/
+.hotPush{
+	width: 100%;
+	/*margin-top: 40px;*/
+	position: relative;
+	/*bottom: 0;*/
+	/*left: 0;*/
 }
+.hotPush a{
+	text-decoration: none;
+	margin: 10px;
+	color: #666;
+}
+.pushBrand{
+	font-size: 12px;
 
-
+}
+.pushWords{
+	position: absolute;
+	left: 50%;
+	top: 0;
+}
+.pushP{
+	color: #333333;
+	font-size: 14px;
+}
+.report{
+	margin: 20px 0;
+	
+}
 /*底部开始*/
 
 /*底部结束*/
