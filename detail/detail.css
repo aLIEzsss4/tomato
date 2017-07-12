@@ -10,10 +10,13 @@ body{
 	font-size: 12px;
 }
 .clearfix{
-	overflow: auto;
+	zoom: 1;
 }
-.fix{
+.clearfix:after{
 	content: '';
+	display: block;
+	height: 0;
+	clear: both;
 }
 .fl {
 	float: left;
