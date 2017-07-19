@@ -14,13 +14,21 @@ window.onload = function() {
 		var flTop = document.querySelector('.flTop')
 		var flTxt = document.querySelector('.flTxt')
 		var close = document.querySelector('.close')
-
+		
+		var fiexFoot=document.querySelector('#fiexFoot')
 		if(document.body.scrollTop > (floatShow.offsetTop - window.screen.height / 2)) {
 			flItem.style.display = 'block';
 			flItem.style.bottom = '-460px';
 			window.removeEventListener('scroll', floatLogin)
-
+		console.log(document.body.scrollTop,fiexFoot.offsetTop)
+		}else if(document.body.scrollTop>=1502){
+			flItem.style.position='relative'
+			flItem.style.bottom = '0';
+			window.removeEventListener('scroll', floatLogin)
+			alert(1)
 		}
+
+		
 		showL.onclick = function() {
 			flItem.style.bottom = '0';
 			flTop.style.display = 'block'
@@ -75,7 +83,7 @@ window.onload = function() {
 			} else {
 				topValue += 10;
 			}
-			console.log(topValue)
+//			console.log(topValue)
 			return tipTxt.style.top = topValue + 'px'
 		}
 
