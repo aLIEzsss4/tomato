@@ -57,11 +57,12 @@ window.onload = function() {
 		var model = document.getElementById('model');
 		var colse = document.getElementById('tipClose');
 		var tipTxt = document.getElementById('tipTxt');
+		var toolTip =document.getElementById('toolTip')
 		var timeLi = [];
 		var timeOut = document.getElementById('timeOut')
 		//		console.log(document.getElementById('tipTxt').style.width)
 		var topValue = 0
-
+		var calender=document.getElementById('calendar')
 		var chooseDay = document.getElementById('chooseDay')
 		var chooseWeek = document.getElementById('chooseWeek')
 		var chooseMonth = document.getElementById('chooseMonth')
@@ -151,13 +152,17 @@ window.onload = function() {
 		chooseDay.onclick = function() {
 			model.style.height = document.body.scrollHeight + 'px';
 			model.style.display = 'block';
+			toolTip.style.display='none';
 			document.body.style.overflow = 'hidden';
 			document.body.style.marginRight = '15px';
-			fun_day()
+			calender.style.display='block';
 		};
+		
 		chooseWeek.onclick = function() {
 			model.style.height = document.body.scrollHeight + 'px';
 			model.style.display = 'block';
+			toolTip.style.display='block';
+			
 			document.body.style.overflow = 'hidden';
 			document.body.style.marginRight = '15px';
 			fun_date()
@@ -166,11 +171,18 @@ window.onload = function() {
 		chooseMonth.onclick = function() {
 			model.style.height = document.body.scrollHeight + 'px';
 			model.style.display = 'block';
+			toolTip.style.display='block';
+			
 			document.body.style.overflow = 'hidden';
 			document.body.style.marginRight = '15px';
 			fun_month()
 		};
-
+		model.onclick=function(){
+			model.style.display='none';
+			calender.style.display='none';
+			document.body.style.overflow = 'visible';
+			document.body.style.marginRight = '0px';
+		}
 		function fun_day() {
 			//日榜
 			initTxt();
@@ -225,7 +237,8 @@ window.onload = function() {
 		};
 
 		function hideTip() {
-
+				model.style.display='none';
+				calender.style.display='none'
 		}
 
 		timeShow.onclick = function() {

@@ -13,6 +13,10 @@ body{
 a{
 	text-decoration: none;
 }
+h2{
+	font-weight: normal;
+	color: #FFD70D;
+}
 .clearfix{
 	zoom: 1;
 }
@@ -40,6 +44,7 @@ a{
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
 	line-height: 20px;
 	font-size: 14px;
+	background-color: #fff;
 }
 .geo em{
 	font-style: normal;
@@ -92,6 +97,7 @@ a{
 	float:left;
 	position: relative;
 	border-radius: 4px;
+	background-color: #fff;
 }
 .no1Item:last-child{
 	width: 240px;
@@ -194,6 +200,7 @@ a{
 	border: 1px #999 solid;
 	position: relative;
 	margin-right: 10px;
+	background-color: #fff;
 }
 .monthIcon{
 	display: inline-block;
@@ -268,14 +275,14 @@ a{
 }
 .rise{
 	border: 5px solid transparent;
-	border-top-color:#f6533d  ;
+	border-top-color:#ccc  ;
 	position: absolute;
 	right: 20%;
 	top: 40%;	
 }
 .down{
 	border: 5px solid transparent;
-	border-bottom-color:#94cb56  ;
+	border-bottom-color:#FFD70D  ;
 	position: absolute;
 	right: 20%;
 	top: 40%;	
@@ -308,6 +315,7 @@ a{
 .overTable::scrol
 /*文章*/
 .h2Tit {
+	font-weight: normal;
 	color: #ffd70d;
 	font-size: 16px;
 	line-height: 23px;
@@ -506,6 +514,7 @@ a{
 	border-radius: 4px;
 	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
 	margin-bottom: 60px;
+	background-color: #fff;
 }
  .wb{
  	width: 530px;
@@ -1007,6 +1016,7 @@ left: 50%;
 
 
 #calendar{
+	display: none;
 	padding: 10px 30px;
 	width: 278px;
 	position: absolute;
@@ -1017,6 +1027,7 @@ left: 50%;
 	border-radius: 4px;
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
 	background-color: #FFFFFF;
+	z-index: 9999;
 }
 .calendarHead{
 	margin-top: 10px;
