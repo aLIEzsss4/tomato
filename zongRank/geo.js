@@ -80,6 +80,7 @@ window.onload = function() {
 
 		(function timeLoad() {
 			var myDate = new Date;
+			timeShow.innerHTML=myDate.getMonth()+1+'月'
 			add0(myDate, timeOut)
 			//			timeOut.innerHTML='';
 		})();
@@ -142,30 +143,23 @@ window.onload = function() {
 		
 		function initTxt(){
 			
+			tipTxt.innerHTML = [];
+			topValue = 0;
+			tipTxt.style.top = 0;
 			return 
-					tipTxt.innerHTML = [];
-					topValue = 0;
-					tipTxt.style.top = 0;
-			
-			
 		}
 		chooseDay.onclick = function() {
 			model.style.height = document.body.scrollHeight + 'px';
 			model.style.display = 'block';
 			document.body.style.overflow = 'hidden';
 			document.body.style.marginRight = '15px';
-
-			
-
 			fun_day()
-
 		};
 		chooseWeek.onclick = function() {
 			model.style.height = document.body.scrollHeight + 'px';
 			model.style.display = 'block';
 			document.body.style.overflow = 'hidden';
 			document.body.style.marginRight = '15px';
-
 			fun_date()
 
 		};
@@ -174,17 +168,13 @@ window.onload = function() {
 			model.style.display = 'block';
 			document.body.style.overflow = 'hidden';
 			document.body.style.marginRight = '15px';
-
-
 			fun_month()
-
 		};
 
 		function fun_day() {
 			//日榜
+			initTxt();
 			var myDate = new Date;
-			topValue = 0;
-			tipTxt.style.top = 0;
 			var today = new Date;
 			for(var i = 0; i < myDate.getDate(); i++) {
 				timeLi[i] = document.createElement('li');
@@ -197,9 +187,8 @@ window.onload = function() {
 
 		function fun_month() {
 			//月榜
+			initTxt();
 			var myDate = new Date;
-			topValue = 0;
-			tipTxt.style.top = 0;
 			for(var i = myDate.getMonth(); i >= 0; i--) {
 				timeLi[i] = document.createElement('li');
 
@@ -213,8 +202,7 @@ window.onload = function() {
 
 		function fun_date() {
 			//周榜
-			topValue = 0;
-			tipTxt.style.top = 0;
+			initTxt();
 			var myDate = new Date;
 			var week = myDate.getDay();
 			for(var i = 0; i < 6; i++) {
