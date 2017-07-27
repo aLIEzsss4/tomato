@@ -1,0 +1,3161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>table</title>
+		<link rel="stylesheet" type="text/css" href="table.css" />
+		<script src="table.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="main">
+			
+			
+			<!--总榜-->
+			<div class="dbTable" id="count">
+				<div class="rankHead">
+					<ul class="dbBtn">
+						<li>
+							<a href="javascript:;" class="dayBtn ac" id="chooseDay">日榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="chooseWeek">周榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="chooseMonth">月榜</a>
+						</li>
+					</ul>
+					<div class="timeItem">
+						<div class="month">
+							<i class="monthIcon"></i>
+							<span class="monthTxt" id="timeGet"></span>
+						</div>
+						<span class="deadline">数据截至时间：<span id="timeOut"></span> 0 时</span>
+					</div>
+
+				</div>
+
+				<div id="count_day">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">DBRank100总榜</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>DB总值</th>
+							<th>日涨跌幅</th>
+							<th>传播度</th>
+							<th>参与度</th>
+							<th>好感度</th>
+							<th>*(行业内)心智占有率</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>11243</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="count_week">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">DBRank100总榜</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>DB总值</th>
+							<th>周涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+							<th>周排名波动</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<div id="count_month">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">DBRank100总榜</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>DB总值</th>
+							<th>月涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+							<th>月排名波动</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+			<!--地理榜-->
+			<div class="dbTable" id="geo">
+				<div class="rankHead">
+					<ul class="dbBtn">
+						<li>
+							<a href="javascript:;" class="dayBtn ac" id="geoDay">日榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="geoWeek">周榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="geoMonth">月榜</a>
+						</li>
+					</ul>
+					<div class="timeItem">
+						<div class="month">
+							<i class="monthIcon"></i>
+							<span class="monthTxt" id="timeGet"></span>
+						</div>
+						<span class="deadline">数据截至时间：<span id="timeOut"></span> 0 时</span>
+					</div>
+
+				</div>
+
+				<div id="geo_day">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">地理榜--北京</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>DB总值</th>
+							<th>日涨跌幅</th>
+							<th>传播度</th>
+							<th>参与度</th>
+							<th>好感度</th>
+							<th>*(归属地)心智占有率</th>
+							<th>*(归属地)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>11243</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+1<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="geo_week">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">地理榜--北京</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>DB总值</th>
+							<th>周涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(归属地)心智占有率</th>
+							<th>*(归属地)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<div id="geo_month">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">地理榜--北京</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>DB总值</th>
+							<th>月涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(归属地)心智占有率</th>
+							<th>*(归属地)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+			<!--行业榜-->
+			<div class="dbTable" id="industry">
+				<div class="rankHead">
+					<ul class="dbBtn">
+						<li>
+							<a href="javascript:;" class="dayBtn ac" id="industryDay">日榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="industryWeek">周榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="industryMonth">月榜</a>
+						</li>
+					</ul>
+					<div class="timeItem">
+						<div class="month">
+							<i class="monthIcon"></i>
+							<span class="monthTxt" id="timeGet"></span>
+						</div>
+						<span class="deadline">数据截至时间：<span id="timeOut"></span> 0 时</span>
+					</div>
+
+				</div>
+
+				<div id="industry_day">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">行业榜--互联网</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>DB总值</th>
+							<th>日涨跌幅</th>
+							<th>传播度</th>
+							<th>参与度</th>
+							<th>好感度</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>11243</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="industry_week">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">行业榜--互联网</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>DB总值</th>
+							<th>周涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<div id="industry_month">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">行业榜--互联网</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>DB总值</th>
+							<th>月涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+		
+			<!--平台榜-->
+			<div class="dbTable" id="platform">
+				<div class="rankHead">
+					<ul class="dbBtn">
+						<li>
+							<a href="javascript:;" class="dayBtn ac" id="platformDay">日榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="platformWeek">周榜</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="dayBtn" id="platformMonth">月榜</a>
+						</li>
+					</ul>
+					<div class="timeItem">
+						<div class="month">
+							<i class="monthIcon"></i>
+							<span class="monthTxt" id="timeGet"></span>
+						</div>
+						<span class="deadline">数据截至时间：<span id="timeOut"></span> 0 时</span>
+					</div>
+
+				</div>
+
+				<div id="platform_day">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">平台榜--微信</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>平台DB值</th>
+							<th>日涨跌幅</th>
+							<th>传播度</th>
+							<th>参与度</th>
+							<th>好感度</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>11243</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>23112</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>11243</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="platform_week">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">平台榜--微信</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>平台DB值</th>
+							<th>周涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				
+				<div id="platform_month">
+					<table border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<th colspan="10" id="geoTit">平台榜--微信</th>
+						</tr>
+
+						<tr>
+							<th>排名</th>
+							<th>品牌名称</th>
+							<th>行业</th>
+							<th>平台DB值</th>
+							<th>月涨跌幅</th>
+							<th>波峰值</th>
+							<th>波谷值</th>
+							<th>*(行业内)心智占有率</th>
+							<th>*(行业内)心智占有率涨跌</th>
+						</tr>
+					</table>
+
+					<div class="hideScroll">
+
+						<div class="overTable">
+
+							<table border="0" cellspacing="0" cellpadding="0" class="hideTable">
+
+								<tr>
+									<th>1</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>2</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">-10.00%<span class="rise"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>3</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>4</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>5</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>6</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>7</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>8</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>9</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>10</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>11</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>12</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>13</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>14</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>15</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>16</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>17</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>18</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>19</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+								<tr>
+									<th>20</th>
+									<td>腾讯</td>
+									<td>IT</td>
+									<td>38438</td>
+									<td class="up">+90.00%<span class="down"></span></td>
+									<td>29839</td>
+									<td>23145</td>
+									<td>97.00%</td>
+									<td class="up">+10.00%<span class="down"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+		</div>
+
+	</body>
+
+</html>
