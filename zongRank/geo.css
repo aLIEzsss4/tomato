@@ -241,7 +241,7 @@ h2{
 	background-color: #fff;
 	box-sizing: border-box;
 	color: #666;
-	
+	white-space: nowrap;
 }
 
 
@@ -293,6 +293,12 @@ h2{
 	bottom: -30px;
 	color: #666;
 }
+.tabular2{
+	position: absolute;
+	left: 0;
+	bottom: -45px;
+	color: #666;
+}
 .hideScroll{
 	/*width: 100%;*/
 	width: 1170px;
@@ -301,10 +307,8 @@ h2{
 	
 }
 .overTable{
-	position: absolute;
-	left: 0;
 	overflow-y: auto;
-	overflow-x: auto;
+	overflow-x: hidden;
 	height: 400px;
 }
 .hideTable{
@@ -312,7 +316,6 @@ h2{
 }
 /*::-webkit-scrollbar{width:0px}*/
 .overTable::-webkit-scrollbar {display:none}
-.overTable::scrol
 /*文章*/
 .h2Tit {
 	font-weight: normal;
@@ -358,6 +361,15 @@ h2{
 	line-height: 22px;
 	margin-top: 11px;
 	margin-bottom:10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+	cursor: pointer;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	height: 44px;
+
 }
 .postsInfo{
 }
@@ -404,6 +416,7 @@ h2{
 }
 .brandP{
 	display: inline-block;
+	cursor: pointer;
 }
 .brandImg{
 	position: absolute;
@@ -465,6 +478,7 @@ h2{
 .userItem{
 	position: relative;
 	margin-right: 20px;
+	cursor: pointer;
 }
 .userImg{
 	display: inline-block;
@@ -492,6 +506,7 @@ h2{
 	bottom: 13px;
 }
 .postsTxt2{
+	cursor: pointer;
 	color:#666 ;
 	position: absolute;
 	right: 0;
@@ -1112,4 +1127,5 @@ left: 50%;
 /* 其他月颜色 */
 .otherMonth{
   color: #DCDCDC;
+  cursor: not-allowed;
 }

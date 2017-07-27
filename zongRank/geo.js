@@ -356,11 +356,17 @@ window.onload = function() {
 				_tds[i].setAttribute('data',_thisDayStr);
 				if(_thisDayStr == getDateStr(new Date())) { // 当前天
 					_tds[i].className = 'currentDay';
-				} else if(_thisDayStr.substr(0, 6) == getDateStr(_firstDay).substr(0, 6)) {
+//				} else if(_thisDayStr.substr(0,8)>getDateStr(new Date())){ // 其他月
+//					_tds[i].className = 'otherMonth';
+//				}
+				
+				}else if(_thisDayStr.substr(0, 6) == getDateStr(_firstDay).substr(0, 6)&& _thisDayStr.substr(0, 6) <getDateStr(new Date())){
 					_tds[i].className = 'currentMonth'; // 当前月
-				} else { // 其他月
+				} else{
 					_tds[i].className = 'otherMonth';
+					
 				}
+				
 			}
 		};
 		
