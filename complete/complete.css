@@ -1,0 +1,858 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+ul {
+	list-style: none;
+}
+body{
+	background-color: #fcfcf7;
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+h2{
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+.clearfix{
+	zoom: 1;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.content {
+	margin: 0 auto;
+	width: 1170px;
+}
+
+/*地理榜*/
+.geo{
+	padding: 20px 10px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+	line-height: 20px;
+	font-size: 14px;
+	background-color: #fff;
+}
+.geo em{
+	font-style: normal;
+	color: #FFD70D;
+	margin-right: 10px;
+}
+.geo span{
+	margin-right: 10px;
+}
+.province{
+	
+}
+.bold{
+	display: inline-block;
+	color: #333333;
+	font-weight: bold;
+}
+.brSpan{
+	float: right;
+	width: 1090px;
+	height: 56px;
+	line-height: 28px;
+	display: inline-block;
+}
+.country{
+	margin-top: 20px;
+}
+.geoMore{
+	margin: 10px auto;
+	margin-top: 30px;
+	width: 10px;
+	height: 10px;
+	border-top:1px solid #CCCCCC ;
+	border-left:1px solid #CCCCCC ;
+	transform: rotate(45deg);
+	cursor: pointer;
+	transition: all 0.3s;
+}
+.province:first-child .geoMore{
+	margin-top: 35px;
+}
+/*状态点击，点击完朝上，默认向下*/
+.geoMore:hover{
+	transform: rotate(225deg);
+}
+
+
+
+
+/*no1榜*/
+.rankNo1{
+	margin: 20px 0;
+	height: 140px;
+}
+.no1Item{
+	margin-right: 20px;
+	height: 80px;
+	width: 210px;
+	padding: 30px;
+	box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+	float:left;
+	position: relative;
+	border-radius: 4px;
+	background-color: #fff;
+}
+.no1Item:last-child{
+	width: 240px;
+	margin: 0;
+}
+.rankimg{
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	/*background-color: #666666;*/
+	margin-right: 40px;
+	left: 0;
+	top: 0;
+}
+.no1Tit{
+	font-size: 18px;
+	color: #333333;
+	line-height: 30px;
+	position: absolute;
+	left: 145px;
+	top: 30px;
+}
+
+.no1Name{
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+	position: absolute;
+	left: 145px;
+	top:65px;
+}
+.no1Value{
+	font-size: 14px;
+	color: #FFD70D;
+	line-height: 20px;
+	position: absolute;
+	left: 145px;
+	top: 95px;
+}
+.no1Item:last-child .no1Tit{
+	left: 125px;
+}
+.no1Item:last-child .no1Name{
+	left: 125px;
+}
+.no1Item:last-child .no1Value{
+	left: 125px;
+}
+
+.mindSpan{
+	color:#999 ;
+	position: absolute;
+	top: 13px;
+	left: 125px;
+}
+.cardUP{
+	
+	
+   border: 7px solid transparent;
+	border-top: 14px solid #FFD70D;
+	transform: rotateX(-135deg);
+	position: absolute;
+	right: -17px;
+    top: -4px;
+}
+.cardDown{
+	 border: 7px solid transparent;
+    border-top: 14px solid #DCDCDC;
+    transform: rotateX(-45deg);
+    position: absolute;
+    right: -17px;
+    top: 0px;
+}
+
+
+
+
+
+/*行业榜*/
+.industry{
+	padding: 20px 10px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+	line-height: 20px;
+	font-size: 14px;
+	background-color: #fff;
+	border-radius: 4px;
+	
+}
+.industry li {
+	display: inline;
+	margin-right: 15px;
+	cursor: pointer;
+}
+
+.industryAc{
+	color: #FFD70D;
+}
+
+/*平台榜*/
+.polatform{
+	padding: 20px 10px;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+	font-size: 14px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.blod{
+	color: #333333;
+	display: inline;
+}
+.polatformAc{
+	color: #FFD70D;
+}
+.polatform span{
+	cursor: pointer;
+	margin-right: 20px;
+}
+
+
+/*文章*/
+.articleTit {
+	display: block;
+	font-weight: normal;
+	color: #ffd70d;
+	font-size: 16px;
+	line-height: 23px;
+}
+
+.int {
+	line-height: 35px;
+	color: #999;
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+
+/*改版之后的文章*/
+.postsItem{
+	width: 530px;
+	height: 160px;
+	box-sizing: border-box;
+ 	border-top: 1px solid #dcdcdc;
+}
+.postsIndex{
+	line-height: 158px;
+	color: #333;
+	font-size: 16px;
+	float: left;
+}
+.postsCon{
+	float: right;
+	width: 500px;
+	
+}
+.postsHead{
+	width: 100%;
+	height: 88px;
+	border-bottom: 1px solid #F2F2F2;
+	position: relative;
+}
+.postsTxt{
+	color: #333333;
+	font-size: 16px;
+	line-height: 22px;
+	margin-top: 11px;
+	margin-bottom:10px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	display: inline-block;
+	cursor: pointer;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	height: 44px;
+
+}
+.postsTxt:hover{
+	color: #FFD70D;
+}
+.postsInfo{
+}
+.postsAdd{
+	margin-right: 5px;
+	color: #666;
+}
+.postsDate{
+	color: #666666;
+}
+.postsFlow{
+	color: #999;
+	margin-left: 40px;
+	position: relative;
+}
+.postsIcon1{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	background-image: url(pageIcon.png);
+	background-position: 0 0 ;
+	position: absolute;
+	left: -40px;
+	top: -3px;
+}
+.postsIcon2{
+
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	background-image: url(pageIcon.png);
+	background-position: -22px 0 ;
+	display: inline-block;
+	position: absolute;
+    left: -40px;
+    top: -3px;
+}
+.postsIcon3{
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	background-image: url(pageIcon.png);
+	background-position: -44px 0 ;
+	display: inline-block;
+	position: absolute;
+    left: -40px;
+    top: -3px;
+}
+.postsIcon4{
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	background-image: url(pageIcon.png);
+	background-position: -66px 0 ;
+	display: inline-block;
+	position: absolute;
+    left: -40px;
+    top: -3px;
+}
+.postsIcon5{
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	background-image: url(pageIcon.png);
+	background-position: -88px 0 ;
+	display: inline-block;
+	position: absolute;
+    left: -40px;
+    top: -3px;
+}
+.postsIcon6{
+	
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	background-image: url(pageIcon.png);
+	background-position: -110px 0 ;
+	display: inline-block;
+	position: absolute;
+    left: -40px;
+    top: -3px;
+}
+.postsNum{
+	font-style: normal;
+	color: #999;
+}
+.postsFoot{
+	height: 60px;
+}
+.postsInt{
+	width: 56px;
+	line-height: 60px;
+	display: inline-block;
+	white-space: nowrap;
+	color: #FFD70D;
+	font-size: 12px;
+	float: left;
+}
+.postsBrandList{
+	display: inline-block;
+	line-height: 10px;
+	
+}
+.postsBrand{
+	color: #999999;
+	width: 138px;
+	position: relative;
+	float: left;
+	display: table;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.brandP{
+	display: table-cell;
+	cursor: pointer;
+	width: 50px;
+	height: 60px;
+	vertical-align: middle;
+	text-align: center;
+	line-height: 18px;
+}
+.brandImg{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	top:10px;
+	left: 50px;
+	border-radius: 50%;
+	background-color: #999999;
+	cursor: pointer;
+}
+.brandLike{
+	position: absolute;
+	width: 40px;
+	height: 25px;
+	right: 5px;
+	top: 15px;
+	background:url(pageIcon.png);
+	background-position: 0 -22px;
+}
+.brandLike2{
+	position: absolute;
+	width: 40px;
+	height: 25px;
+	right: 5px;
+	top: 15px;
+	background:url(pageIcon.png);
+	background-position: -40px -22px;
+	
+}
+.brandLike3{
+	position: absolute;
+	width: 40px;
+	height: 25px;
+	right: 5px;
+	top: 15px;
+	background:url(pageIcon.png);
+	background-position: -80px -22px;
+}
+.brandLike4{
+	position: absolute;
+	width: 40px;
+	height: 25px;
+	right: 5px;
+	top: 15px;
+	background:url(pageIcon.png);
+	background-position: -120px -22px;
+}
+.brandLike5{
+	position: absolute;
+	width: 40px;
+	height: 25px;
+	right: 5px;
+	top: 15px;
+	background:url(pageIcon.png);
+	background-position: -160px -22px;
+}
+
+
+
+/*kol文章*/
+.userItem{
+	position: relative;
+	margin-right: 20px;
+	cursor: pointer;
+}
+.userImg{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #999999;
+	margin-top: 7px;
+}
+.userName{
+	position: absolute;
+	font-size: 16px;
+	color: #666;
+    left: 40px;
+    top: 10px;
+    width: 110px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.left{
+	position: absolute;
+	left: 0;
+	bottom: 13px;
+}
+.right{
+	position: absolute;
+	right: 0;
+	bottom: 13px;
+}
+.postsTxt2{
+	width: 339px;
+	cursor: pointer;
+	color:#666 ;
+	position: absolute;
+	right: -23px;
+	top: 10px;
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	height: 34px;
+}
+.postsTxt2:hover{
+	color: #FFD70D;
+}
+
+
+	
+/*改版结束*/
+
+.conFoot{
+	/*margin-bottom: 60px;*/
+	width: 1170px;
+	/*margin-top: 47px;*/
+	/*box-sizing: border-box;*/
+}
+.footRank{
+	margin-top: 20px;
+	width: 530px;
+	padding: 20px;
+	border-radius: 4px;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 60px;
+	background-color: #fff;
+}
+ /*文章结束*/
+
+
+
+
+
+/*榜单*/
+#Cr_co_day{
+	display: block;
+}
+#Cr_co_week{
+	display: none;
+}
+#Cr_co_month{
+	display: none;
+}
+#count_day{
+	
+}
+#count_week{
+	display: none;
+}
+#count_month{
+	display: none;
+}
+
+
+/*地理*/
+#Crad_geo_day{
+	display: block;
+}
+#Crad_geo_week{
+	display: none;
+}
+#Crad_geo_month{
+	display: none;
+}
+#geo{
+	/*margin-top: 200px;*/
+}
+#geo_day{
+	display: block;
+}
+#geo_week{
+	display: none;
+}
+#geo_month{
+	display: none;
+}
+
+
+/*行业*/
+#Table_in_day{
+	display: block;
+}
+#Table_in_week{
+	display: none;
+}
+#Table_in_month{
+	display: none;
+}
+#industry{
+	/*margin-top: 200px;*/
+}
+#industry_day{
+	display: none;
+}
+#industry_week{
+	display: none;
+}
+#industry_month{
+	display: block;
+}
+
+
+/*平台*/
+#CR_pl_day{
+	display: block
+}
+#CR_pl_week{
+	display: none;
+}
+#CR_pl_month{
+	display: none;
+}
+#platform{
+	/*margin-top: 200px;*/
+}
+#platform_day{
+	display: block;
+}
+#platform_week{
+	display: none;
+}
+#platform_month{
+	display: none;
+}
+
+
+.dbTable{
+	margin: 20px auto;
+	position: relative;
+	text-align: center;
+}
+.rankHead{
+	margin: 20px auto;
+	height: 30px;
+}
+.dbBtn{
+	width: 270px;
+	float: left;	
+}
+.dayBtn{
+	display: inline-block;
+	float: left;
+	height: 30px;
+	width: 70px;
+	line-height: 30px;
+	box-sizing: border-box;
+	border: 1px solid #999;
+	margin-right: 20px;
+	color: #999;
+	background: #fff;
+	border-radius: 4px;
+}
+.dayBtn:hover{
+	color: #Fff;
+	background-color: #FFD70D;
+	border: 1px solid #FFD70D;
+	
+}
+/*激活状态*/
+.ac {
+	color: #FFD70D;
+	background-color: #fff;
+	border: 1px solid #FFD70D;
+}
+.timeItem{
+	float: right;
+	line-height: 30px;
+	
+}
+.month{
+	float: left;
+	width: 87px;
+	border-radius: 4px;
+	border: 1px #999 solid;
+	position: relative;
+	margin-right: 10px;
+	background-color: #fff;
+}
+.monthIcon{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	background-image: url(calendar.png);
+	position: absolute;
+	left: 11px;
+	top: 4px;
+	
+}
+.monthTxt{
+	border-left: 1px solid #999;
+	padding-left: 10px;
+	margin-left: 32px;
+}
+
+.deadline{
+	
+	font-size: 14px;
+	line-height: 20px;
+	color: #666;
+}
+
+
+
+
+.dbTable table{
+	/*width: 100%;*/
+	width: 1170px;
+	border: 0px solid #fff;
+	box-sizing: border-box;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+
+}
+.dbTable td,th {
+	height: 40px;
+	width: 10%;
+	border: 1px solid #dcdcdc;
+	background-color: #fff;
+	box-sizing: border-box;
+	color: #666;
+}
+
+
+.dbTable th{
+	color: #333;
+	background-color: #f2f2f2;
+	font-size: 12px;
+	font-weight: 500;
+	
+}
+
+.overTable tr:nth-child(odd) td{
+	/*background-color: #FCFCF7;*/
+	color: #666;
+}
+.overTable tr:nth-child(-n+3){
+	font-size: 16px;
+}
+.overTable tr td:last-child{
+	color: #FFD70D;
+}
+#geoTit{
+	color: #333333;
+	font-size: 18px;
+	background-color: #f2f2f2;
+	font-weight: 600;
+	
+}
+.up{
+	position: relative;
+}
+.rise{
+	border: 5px solid transparent;
+	border-top-color:#ccc  ;
+	position: absolute;
+	right:20%;
+	top: 40%;	
+}
+tr:nth-child(-n+3) .rise{
+	border: 5px solid transparent;
+	border-top-color:#ccc  ;
+	position: absolute;
+	right:13%;
+	top: 40%;	
+}
+.down{
+	border: 5px solid transparent;
+	border-bottom-color:#FFD70D  ;
+	position: absolute;
+	right: 20%;
+	top: 40%;	
+}
+tr:nth-child(-n+3) .down{
+	border: 5px solid transparent;
+	border-bottom-color:#FFD70D  ;
+	position: absolute;
+	right: 13%;
+	top: 40%;	
+}
+/*
+ .rise{
+	border: 7px solid transparent;
+	border-top: 14px solid #DCDCDC;
+	transform: rotateX(-45deg);
+	position: absolute;
+    right: 20px;
+    top: 11px;
+	
+}
+tr:nth-child(-n+3) .rise{
+	border: 7px solid transparent;
+	border-top: 14px solid #DCDCDC;
+	transform: rotateX(-45deg);
+	position: absolute;
+    right: 13px;
+    top: 10px;
+}
+.down{
+	border: 7px solid transparent;
+	border-top: 14px solid #FFD70D;
+	transform: rotateX(-135deg);
+	position: absolute;
+	 right: 20px;
+    top: 6px;
+}
+tr:nth-child(-n+3) .down{
+	
+    border: 7px solid transparent;
+	border-top: 14px solid #FFD70D;
+	transform: rotateX(-135deg);
+	position: absolute;
+    right: 13px;
+    top: 7px;
+}
+*/
+
+
+.tabular{
+	position: absolute;
+	left: 0;
+	bottom: -30px;
+	color: #666;
+}
+.tabular2{
+	position: absolute;
+	left: 0;
+	bottom: -45px;
+	color: #666;
+}
+.hideScroll{
+	/*width: 100%;*/
+	width: 1170px;
+	height: 400px;
+	overflow: hidden;
+	
+}
+.overTable{
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 400px;
+}
+.hideTable{
+	
+}
+.overTable::-webkit-scrollbar {display:none}
