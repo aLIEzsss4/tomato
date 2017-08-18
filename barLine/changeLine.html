@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>历史曲线图</title>
+    <script src="echarts.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<div id="main" style="width: 1170px;height:550px;padding:10%;"></div>
+    
+</body>
+
+<script>
+    window.onload = function () {
+
+
+        var myChart =echarts.init(document.getElementById('main'))
+        var xAxisData = [];
+        var data1 = [];
+        var data2 = [];
+        var data3 = [];
+        var data4 = [];
+        var data5 = [];
+        for (var i = 0; i < 30; i++) {
+            // xAxisData.push('类目' + i);
+            data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
+            data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
+            data3.push((Math.cos(i / 6) * (i / 6 - 10) + i / 6) * 5);
+            data4.push((Math.cos(i / 7) * (i / 7 - 10) + i / 6) * 5);
+            var ss = data1[i] + data2[i] + data3[i] + data4[i]
+            data5.push(ss)
+        }
+
+        option = {
+            title: {
+                text: '柱状图动画延迟'
+            },
+            legend: {
+                data: ['bar', 'bar2', 'bar3', 'bar4', 'line'],
+                align: 'left'
+            },
+            toolbox: {
+                // y: 'bottom',
+                feature: {
+                    magicType: {
+                        type: ['stack', 'tiled']
+                    },
+                    dataView: {},
+                    saveAsImage: {
+                        pixelRatio: 2
+                    }
+                }
+            },
+            tooltip: {},
+            xAxis: {
+                data: xAxisData,
+                silent: false,
+                splitLine: {
+                    show: false
+                }
+            },
+            yAxis: {
+            },
+            series: [{
+                name: 'bar',
+                type: 'bar',
+                data: data1,
+                animationDelay: function (idx) {
+                    return idx * 10;
+                }
+            }, {
+                name: 'bar2',
+                type: 'bar',
+                data: data2,
+                animationDelay: function (idx) {
+                    return idx * 10 + 100;
+                }
+            }, {
+                name: 'bar3',
+                type: 'bar',
+                data: data2,
+                animationDelay: function (idx) {
+                    return idx * 10 + 100;
+                }
+            }, {
+                name: 'bar4',
+                type: 'bar',
+                data: data2,
+                animationDelay: function (idx) {
+                    return idx * 10 + 100;
+                }
+            }, {
+                name: 'line',
+                type: 'line',
+                data: data5
+            }],
+            animationEasing: 'elasticOut',
+            animationDelayUpdate: function (idx) {
+                return idx * 5;
+            }
+        };
+
+
+        myChart.setOption(option)
+
+    }
+
+</script>
+
+</html>
